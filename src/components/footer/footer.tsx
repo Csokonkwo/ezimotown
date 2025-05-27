@@ -15,7 +15,7 @@ export default function Footer() {
       {/* footer-container */}
       <div className="flex flex-row items-center justify-between w-full h-full lg:px-[75px]">
         {/* logo */}
-        <div className="flex-shrink-0 relative size-[70px] md:size-56">
+        <Link href='/' className="flex-shrink-0 relative size-[70px] md:size-56">
           <Image
             aria-hidden
             src="/assets/logo/ezimo_logo.png"
@@ -25,7 +25,7 @@ export default function Footer() {
             fill
             className="object-contain"
           />
-        </div>
+        </Link>
         {/* logo */}
         {/* links */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:gap-10 aos-fade-up">
