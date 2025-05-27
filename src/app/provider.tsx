@@ -10,8 +10,8 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { ToastContainer } from 'react-toastify';
 import { queryConfig } from '@/lib/react-query';
 import MainErrorFallback from '@/components/errors/main';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 import { usePathname } from 'next/navigation';
 
 type AppProviderProps = {
@@ -20,6 +20,7 @@ type AppProviderProps = {
 
 export const AppProvider = ({ children }: AppProviderProps) => {
   const pathname = usePathname();
+  const [isClient, setIsClient] = useState(false);
   const [queryClient] = useState(
     () =>
       new QueryClient({
@@ -27,14 +28,15 @@ export const AppProvider = ({ children }: AppProviderProps) => {
       }),
   );
 
-  useEffect(() => {
-    AOS.init({ once: false, offset: 0 });
-    AOS.refresh();
-  }, []);
+  // useEffect(() => {
+  //   setIsClient(true);
+  //   AOS.init({ once: false, offset: 0 });
+  //   AOS.refresh();
+  // }, []);
 
-  useEffect(() => {
-    AOS.refresh();
-  }, [pathname]);
+  // useEffect(() => {
+  //   AOS.refresh();
+  // }, [pathname]);
 
   return (
     <ErrorBoundary FallbackComponent={MainErrorFallback}>

@@ -9,7 +9,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'bg-black-8 border border-black-15 text-gray-60 shadow hover:bg-black-8/90',
+          'bg-black-8 borde cursor-pointer border-black-15 text-gray-60 shadow hover:bg-black-8/90',
       },
       size: {
         default: 'h-14 py-2 rounded-lg',
@@ -54,8 +54,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {isLoading && <Spinner size="sm" className="text-current" />}
-        {!isLoading && icon && <span className="mr-2">{icon}</span>}
         <span className="mx-2">{children}</span>
+        {!isLoading && icon && <span className="ml-2">{icon}</span>}
       </Comp>
     );
   },

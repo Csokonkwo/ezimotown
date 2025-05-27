@@ -4,7 +4,6 @@ import { motion } from 'motion/react';
 import { navLinks } from '@/constants';
 import Link from 'next/link';
 import Image from 'next/image';
-import SectionWrapper from '../section-wrapper/section-wrapper';
 import useNavbarScroll from '@/hooks/use-navbar-scroll';
 import MobileNav from '../mobile-menu';
 
@@ -15,24 +14,20 @@ const Navbar = () => {
   return (
     <>
       <header
-        className="relative bg-cover bg-no-repeat md:bg-center  w-full h-[50vh] md:h-[100vh]"
-        style={{ backgroundImage: `url(/assets/images/waterfall.jpg)` }}
+        className={`relative bg-cover bg-black-15 bg-top bg-blend-overlay bg-[url(/assets/images/waterfall.jpg)] bg-linear(180deg,rgba(0_0_0_0)_64.71%,rgba(0_0_0_0.5)_82.69%) bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[65vh] md:h-[100vh]`}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-[#191919]/70 to-black/90 mix-blend-multiply" />
-        {/* header-subcontainer */}
-        <div className="relative z-10">
+        <div className="relative z-[2]">
           <nav
-            className={`flex items-center bg-black sm:bg-transparent justify-between lg:pl-[72px] lg:pr-[81px] py-10 h-[61px] md:pb-[105px] md:pt-[105px]  w-full`}
+            className={`flex items-center bg-black md:bg-transparent justify-between lg:pl-[72px] lg:pr-[81px] py-10 h-[61px] md:pb-[105px] md:pt-[105px]  w-full`}
           >
             {/* logo */}
             <div className="flex-shrink-0 relative size-[70px] md:size-56">
               <Image
-                aria-hidden
                 src="/assets/logo/ezimo_logo.png"
                 alt="Logo icon"
-                // width={70}
-                // height={70}
-                fill
+                loading="lazy"
+                width={1512}
+                height={982}
                 className="object-contain"
               />
             </div>
@@ -83,12 +78,7 @@ const Navbar = () => {
           {/* header-subcontainer */}
 
           {/* content */}
-          <div
-            className="text-center mt-6 md:mt-12"
-            data-aos="fade-down"
-            data-aos-duration="1200"
-            data-aos-delay=""
-          >
+          <div className="text-center mt-6 md:mt-12">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -103,7 +93,7 @@ const Navbar = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ root: scrollRef }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-white font-helvetica mx-auto max-w-[179px] md:max-w-[496px] text-[7.21px] sm:text-sm md:text-lg font-normal text-center"
+              className="text-white font-helvetica mx-auto max-w-[179px] sm:max-w-sm md:max-w-[496px] text-[7.21px] sm:text-sm md:text-lg font-normal text-center"
             >
               Ezimo Town is rich in Heritage and History. The Town is home to
               Ezimo is home to the Iyi-Nzu Waterfall
@@ -121,12 +111,11 @@ const Navbar = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ root: scrollRef }}
               transition={{ delay: 0.5 }}
-              data-aos="fade-left"
             >
               <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
                 Cultural and Historical Insights
               </h3>
-              <p className="font-helvetica text-center text-white font-normal max-w-[109px] md:max-w-[331px] text-[4.5px] sm:text-xs md:text-sm">
+              <p className="font-helvetica text-center text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs md:text-sm">
                 The Installation of ancestral symbols is part of the historical
                 developments of the people, reflecting their commitment to
                 preserving cultural heritage.
@@ -142,7 +131,7 @@ const Navbar = () => {
               <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
                 Community and Lifestyle
               </h3>
-              <p className="font-helvetica text-center text-white font-normal max-w-[109px] md:max-w-[331px] text-[4.5px] sm:text-xs md:text-sm">
+              <p className="font-helvetica text-center text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs md:text-sm">
                 Ezimo is characterized by its peaceful atmosphere and communal
                 lifestyle. The community is known for its hospitality and strong
                 sense of identity.{' '}
