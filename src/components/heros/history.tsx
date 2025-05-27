@@ -21,7 +21,10 @@ const HistoryHero = () => {
             className={`flex items-center bg-black md:bg-transparent justify-between lg:pl-[72px] lg:pr-[81px] py-10 h-[61px] md:pb-[105px] md:pt-[105px]  w-full`}
           >
             {/* logo */}
-            <Link href='/' className="flex-shrink-0 relative size-[70px] md:size-56">
+            <Link
+              href="/"
+              className="flex-shrink-0 relative size-[70px] md:size-56"
+            >
               <Image
                 src="/assets/logo/ezimo_logo.png"
                 alt="Logo icon"

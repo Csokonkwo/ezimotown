@@ -28,14 +28,15 @@ export default function History() {
         </p>
       </motion.div>
 
-      <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ root: scrollRef }}
-      transition={{ delay: 0.5 }}
-      className='mt-12 lg:mt-[93px] md:px-[80px] lg:px-[102px]'>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ root: scrollRef }}
+        transition={{ delay: 0.5 }}
+        className="mt-12 lg:mt-[93px] md:px-[80px] lg:px-[102px]"
+      >
         <div className="flex flex-col lg:flex-row lg:items-center gap-12">
-          <div className='flex-1 basis-0 w-full  cursor-pointer group'>
+          <div className="flex-1 basis-0 w-full  cursor-pointer group">
             <Image
               src={'/assets/images/history-carousel1.jpg'}
               width={606}
@@ -45,11 +46,12 @@ export default function History() {
             />
           </div>
           <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ root: scrollRef }}
-          transition={{ delay: 0.5 }}
-          className='mt-8 px-8 md:mt-[37px] flex-1 basis-0'>
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ root: scrollRef }}
+            transition={{ delay: 0.5 }}
+            className="mt-8 px-8 md:mt-[37px] flex-1 basis-0"
+          >
             <motion.p className="text-[#FFE9D5] font-helvetica font-normal text-[10px] sm:text-sm lg:text-lg mb-8 lg:mb-12">
               Tucked within the rolling hills of Enugu State, Ezimo Town is more
               than just a dot on the map—it's a vibrant tapestry woven with rich
@@ -87,31 +89,58 @@ export default function History() {
         </div>
       </motion.div>
 
-      <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ root: scrollRef }}
-      transition={{ delay: 0.5 }}
-      className='mt-12 lg:mt-[93px] md:px-[80px] lg:px-[102px]'>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ root: scrollRef }}
+        transition={{ delay: 0.5 }}
+        className="mt-12 lg:mt-[93px] md:px-[80px] lg:px-[102px]"
+      >
         <div className="flex  flex-col-reverse items-center lg:flex-row lg:items-center gap-12">
           <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ root: scrollRef }}
-          transition={{ delay: 0.5 }}
-          className='mt-8 px-8 md:mt-[37px] flex-1 basis-0 w-full'>
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ root: scrollRef }}
+            transition={{ delay: 0.5 }}
+            className="mt-8 px-8 md:mt-[37px] flex-1 basis-0 w-full"
+          >
             <motion.p className="text-[#FFE9D5] font-helvetica font-normal text-[10px] sm:text-sm lg:text-lg mb-8 lg:mb-12">
-            Ezimo, now divided into Ezimo Uno and Ezimo Agu, has long stood as a beacon of unity, culture, and craftsmanship. The town was one of the first in the region to establish a self-rule system that empowered its people, creating a framework of governance rooted in tradition. This system, which predated colonial rule, was based on village councils, age-grade groups, and vibrant masquerade festivals that not only helped maintain law and order but also preserved the rich cultural identity of Ezimo. In a time long before colonial governance reached the rolling hills of the region, Ezimo’s community-led structure allowed the town to thrive, creating a harmonious society where collective decision-making and respect for tradition were paramount.
+              Ezimo, now divided into Ezimo Uno and Ezimo Agu, has long stood as
+              a beacon of unity, culture, and craftsmanship. The town was one of
+              the first in the region to establish a self-rule system that
+              empowered its people, creating a framework of governance rooted in
+              tradition. This system, which predated colonial rule, was based on
+              village councils, age-grade groups, and vibrant masquerade
+              festivals that not only helped maintain law and order but also
+              preserved the rich cultural identity of Ezimo. In a time long
+              before colonial governance reached the rolling hills of the
+              region, Ezimo’s community-led structure allowed the town to
+              thrive, creating a harmonious society where collective
+              decision-making and respect for tradition were paramount.
             </motion.p>
             <motion.p className="text-[#FFE9D5] font-helvetica font-normal text-[10px] sm:text-sm lg:text-lg leading-6 mb-4">
-             It is said that the Ofia Ezimo (Ezimo forest) once echoed with the rhythmic chants of warriors preparing for battle, the soft, melodic songs of moonlit maidens celebrating harvests, and the whispered tales of ancestors who walked the land before them. These stories, passed down through generations, were not just narratives but sacred teachings, guiding the people of Ezimo through both times of prosperity and change. The forest, with its dense canopy and quiet paths, stood as a living testament to the town's history, holding the wisdom of their ancestors in every breeze and rustling leaf.
+              It is said that the Ofia Ezimo (Ezimo forest) once echoed with the
+              rhythmic chants of warriors preparing for battle, the soft,
+              melodic songs of moonlit maidens celebrating harvests, and the
+              whispered tales of ancestors who walked the land before them.
+              These stories, passed down through generations, were not just
+              narratives but sacred teachings, guiding the people of Ezimo
+              through both times of prosperity and change. The forest, with its
+              dense canopy and quiet paths, stood as a living testament to the
+              town's history, holding the wisdom of their ancestors in every
+              breeze and rustling leaf.
             </motion.p>
             <motion.p className="text-[#FFE9D5] font-helvetica font-normal text-[10px] sm:text-sm lg:text-lg">
-            The town of Ezimo played a quiet but undeniably powerful role during the pre-independence era, contributing significantly to the broader political and social movements of the time. Many sons and daughters of Ezimo were at the forefront of early missionary education, civic organization, and the fight for national liberation. 
+              The town of Ezimo played a quiet but undeniably powerful role
+              during the pre-independence era, contributing significantly to the
+              broader political and social movements of the time. Many sons and
+              daughters of Ezimo were at the forefront of early missionary
+              education, civic organization, and the fight for national
+              liberation.
             </motion.p>
           </motion.div>
 
-          <div className='flex-1 basis-0 w-full cursor-pointer group'>
+          <div className="flex-1 basis-0 w-full cursor-pointer group">
             <Image
               src={'/assets/images/history-carousel2.jpg'}
               width={606}

@@ -189,3 +189,30 @@ export const blogs = [
     categories: 'Football',
   },
 ];
+
+export const iyiNzuImages = [
+  {
+    id: 1,
+    image: '/assets/images/waterfall-1.jpg',
+  },
+  {
+    id: 2,
+    image: '/assets/images/waterfall-2.jpg',
+  },
+  {
+    id: 3,
+    image: '/assets/images/waterfall-3.jpg',
+  },
+  {
+    id: 4,
+    image: '/assets/images/waterfall-4.jpg',
+  },
+  {
+    id: 5,
+    image: '/assets/images/waterfall-5.jpg',
+  },
+  {
+    id: 6,
+    image: '/assets/images/waterfall-6.jpg',
+  },
+]

@@ -7,14 +7,14 @@ import Image from 'next/image';
 import useNavbarScroll from '@/hooks/use-navbar-scroll';
 import MobileNav from '../mobile-menu';
 
-const Navbar = () => {
+const IyiNzuHero = () => {
   const scrollRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const { scrolled } = useNavbarScroll();
   return (
     <>
       <header
-        className={`relative bg-cover bg-black-15 bg-top bg-blend-overlay bg-[url(/assets/images/waterfall.jpg)] bg-linear(180deg,rgba(0_0_0_0)_64.71%,rgba(0_0_0_0.5)_82.69%) bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[65vh] md:h-[100vh]`}
+        className={`relative bg-cover bg-black-15 bg-top bg-blend-overlay bg-[url(/assets/images/Iyi-Nzu-hero.jpg)] bg-linear(180deg,rgba(0_0_0_0)_64.71%,rgba(0_0_0_0.5)_82.69%) bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[65vh] md:h-[100vh]`}
       >
         <div className="relative z-[2]">
           <nav
@@ -22,7 +22,7 @@ const Navbar = () => {
           >
             {/* logo */}
             <Link
-              href={'/'}
+              href="/"
               className="flex-shrink-0 relative size-[70px] md:size-56"
             >
               <Image
@@ -89,17 +89,18 @@ const Navbar = () => {
               transition={{ duration: 0.8 }}
               className="text-white font-poppins font-bold text-4xl md:text-7xl lg:text-8xl md:mb-2"
             >
-              Explore <br /> Ezimo Town
+              Iyi-Nzu
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ root: scrollRef }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-white font-helvetica mx-auto max-w-[179px] sm:max-w-sm md:max-w-[496px] text-[7.21px] sm:text-sm md:text-lg font-normal text-center"
+              className="text-white font-helvetica mx-auto max-w-[179px] sm:max-w-sm md:max-w-[893px] text-[7.21px] sm:text-sm md:text-lg font-normal text-center"
             >
-              Ezimo Town is rich in Heritage and History. The Town is home to
-              Ezimo is home to the Iyi-Nzu Waterfall
+              The Iyi-Nzu Waterfall stands as Ezimo Town’s crown jewel — our
+              most prestigious tourist destination and a timeless symbol of
+              pride.
             </motion.p>
           </div>
           {/* content */}
@@ -116,12 +117,12 @@ const Navbar = () => {
               transition={{ delay: 0.5 }}
             >
               <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
-                Cultural and Historical Insights
+                Nature’s Masterpiece in Ezimo
               </h3>
               <p className="font-helvetica text-center text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs md:text-sm">
-                The Installation of ancestral symbols is part of the historical
-                developments of the people, reflecting their commitment to
-                preserving cultural heritage.
+                Cascading through lush, untouched greenery, the Iyi-Nzu
+                Waterfall is a breathtaking natural wonder that captures the
+                soul of Ezimo’s beauty.
               </p>
             </motion.div>
             <motion.div
@@ -132,12 +133,12 @@ const Navbar = () => {
               data-aos="fade-left"
             >
               <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
-                Community and Lifestyle
+                Where Legends Meet the Falls
               </h3>
               <p className="font-helvetica text-center text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs md:text-sm">
                 Ezimo is characterized by its peaceful atmosphere and communal
                 lifestyle. The community is known for its hospitality and strong
-                sense of identity.{' '}
+                sense of identity.
               </p>
             </motion.div>
           </div>
@@ -149,4 +150,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default IyiNzuHero;

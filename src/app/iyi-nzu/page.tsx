@@ -1,16 +1,16 @@
 import BlogStories from '@/components/blog-stories';
 import Footer from '@/components/footer/footer';
-import HistoryHero from '@/components/heros/history';
-import History from '@/components/history';
+import IyiNzuHero from '@/components/heros/iyi-nzu';
+import AboutIyiNzu from '@/components/iyi-nzu';
 import React from 'react';
 
-export default function HistoryPage() {
+export default function IyinzuPage() {
   return (
     <>
-      <HistoryHero />
+      <IyiNzuHero />
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col">
-          <History />
+          <AboutIyiNzu/>
           <BlogStories />
         </main>
       </div>
