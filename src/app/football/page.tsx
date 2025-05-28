@@ -2,7 +2,6 @@ import BlogStories from '@/components/blog-stories';
 import EzimoFootball from '@/components/football';
 import Footer from '@/components/footer/footer';
 import FootballHero from '@/components/heros/football';
-import AboutIyiNzu from '@/components/iyi-nzu';
 import React from 'react';
 
 export default function FootballPage() {

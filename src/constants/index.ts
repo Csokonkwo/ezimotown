@@ -426,3 +426,68 @@ export const carnivalImages1 = [
     image: '/assets/images/carnival8.jpg',
   },
 ];
+
+
+
+export const marathonContent1 = [
+  {
+    id: 1,
+    content: `
+Every year, as dawn breaks over the hills of Ezimo and the morning mist gently rises from the farmland, the atmosphere becomes charged with anticipation. Hundreds of feet gather at the starting point, hearts racing, eyes focused, and spirits brimming with determination.`,
+  },
+  {
+    id: 2,
+    content: `This is the Ezimo Annual Marathon — a celebration not only of endurance but also of the land, legacy, and indomitable will of the Ezimo people. It is a race that tells the story of community, heritage, and resilience, where every step taken is a tribute to the enduring spirit of Ezimo.`,
+  },
+  {
+    id: 3,
+    content: `Founded with the aim of promoting health, community pride, and showcasing the breathtaking natural beauty of the region, the Ezimo Marathon has blossomed from a humble footrace among villagers into one of Southern Enugu's most iconic community sporting events. The marathon course winds through the stunning landscapes of Ezimo, taking runners across the famous red earth roads, vast farmlands, rolling hillsides, and shaded forest trails. Each turn of the route offers a physically demanding challenge, but one that connects participants deeply to the land and the history of their ancestors. As they run, they are not just testing their limits but are embarking on a journey that honors the heritage of Ezimo.
+`,
+  },
+  {
+    id: 4,
+    content: `What makes the Ezimo Marathon stand out from other races isn’t just the physical challenge of the course; it’s the story behind every step. For the young boys racing in sandals, it is the dream of one day becoming the next national champion, running in the footsteps of past legends. For the women, elders, and members of the diaspora returning home, it is an act of unity — a shared celebration of tradition and the strength of their roots. The marathon isn’t just about the runners; it’s about the entire community coming together to celebrate its culture, its history, and its unwavering bond.`,
+  },
+  {
+    id: 5,
+    content: `Along the race route, the entire town of Ezimo becomes part of the marathon. Families line the roads, clapping, singing, and offering water and words of encouragement to the runners. The air is filled with the sounds of local drummers, who energize key mile markers, turning the race route into a rhythmic ribbon of celebration. The pounding of drums, the cheers from the crowd, and the bright smiles of the spectators create an atmosphere that is more than just a sporting event — it is a cultural spectacle that resonates with the deep spirit of Ezimo.
+From the opening stretch to the final finish line, the Ezimo Annual Marathon is a true reflection of the town’s unity, pride, and passion. It’s a race that transcends physical boundaries, becoming a powerful expression of community, tradition, and unshakable resolve. Each year, runners not only compete for victory but also run to honor the legacy of Ezimo — a town that stands tall, both in its rich history and its boundless future.`,
+  },
+];
+
+export const marathonImages1 = [
+  {
+    id: 1,
+    image: '/assets/images/marathon1.jpg',
+  },
+  {
+    id: 2,
+    image: '/assets/images/marathon2.jpg',
+  },
+  {
+    id: 3,
+    image: '/assets/images/marathon3.jpg',
+  },
+  {
+    id: 4,
+    image: '/assets/images/marathon4.jpg',
+  },
+];
+export const marathonImages2 = [
+  {
+    id: 1,
+    image: '/assets/images/marathon5.jpg',
+  },
+  {
+    id: 2,
+    image: '/assets/images/marathon6.jpg',
+  },
+  {
+    id: 3,
+    image: '/assets/images/marathon7.jpg',
+  },
+  {
+    id: 4,
+    image: '/assets/images/marathon8.jpg',
+  },
+];
