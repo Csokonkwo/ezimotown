@@ -1,16 +1,17 @@
 import BlogStories from '@/components/blog-stories';
+import EzimoFootball from '@/components/football';
 import Footer from '@/components/footer/footer';
-import IyiNzuHero from '@/components/heros/iyi-nzu';
+import FootballHero from '@/components/heros/football';
 import AboutIyiNzu from '@/components/iyi-nzu';
 import React from 'react';
 
-export default function IyinzuPage() {
+export default function FootballPage() {
   return (
     <>
-      <IyiNzuHero />
+      <FootballHero />
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col">
-          <AboutIyiNzu />
+          <EzimoFootball />
           <BlogStories />
         </main>
       </div>
