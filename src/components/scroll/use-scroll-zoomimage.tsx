@@ -3,8 +3,10 @@ import { useRef } from 'react';
 
 export default function ScrollZoomText({
   children,
+  className,
 }: {
   children: React.ReactNode;
+  className?: String;
 }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -16,7 +18,11 @@ export default function ScrollZoomText({
   const opacity = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
-    <motion.div ref={ref} style={{ scale, opacity }} className="text-center mx-auto px-10">
+    <motion.div
+      ref={ref}
+      style={{ scale, opacity }}
+      className={`${className ?? 'text-center mx-auto px-4 md:px-10'}`}
+    >
       {children}
     </motion.div>
   );

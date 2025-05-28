@@ -342,3 +342,87 @@ export const footballContent = [
           the youth of Ezimo — and a reminder that no matter where lif`,
   },
 ];
+export const carnivalContent = [
+  {
+    id: 1,
+    content: `The Ezimo Cultural Carnival is not merely an event; it is a living celebration of Ezimo's rich heritage and the enduring spirit of the Igbo people. Every year, as the harmattan breeze sweeps across the hills of Ezimo, the town transforms into a vibrant tapestry of colors, music, and dance. The rhythmic pulse of drums fills the air, the swish of colorful fabrics weaves through the streets, and the voices of the ancestors seem to echo from every corner — this is the Ezimo Cultural Carnival, a week-long festival that captures the essence of unity, pride, and cultural preservation.`,
+  },
+  {
+    id: 2,
+    content: `At its heart, the carnival is a powerful homecoming that unites Ezimo indigenes, their guests, and cultural enthusiasts from across the world. The event begins with an awe-inspiring opening parade that sets the tone for what is to come — a journey through history, tradition, and celebration. From the vibrant masquerades (mmuo) that dance through the streets to the regal processions that remind everyone of Ezimo’s royal lineage, the carnival is a visual spectacle that reflects the strength and beauty of the community’s cultural roots.`,
+  },
+  {
+    id: 3,
+    content: `Traditional dances light up the streets, with performers in dazzling costumes embodying the spirit of the ancestors. Folklore dramatizations take center stage, as young and old alike join in re-enacting ancient tales of bravery, love, and wisdom. These performances are more than just entertainment — they are a means of passing down stories that have been preserved for generations, ensuring that the wisdom of the past is not lost to time.
+`,
+  },
+  {
+    id: 4,
+    content: `Ezimo’s streets become a marketplace of artistry and craftsmanship, with local artisans proudly displaying their work. Beadwork that tells stories of the land, palm-woven hats that showcase ancient techniques, and handcrafted drums that speak the language of rhythm fill the stalls. The aroma of native delicacies such as spicy nkwobi and smoky suya wafts through the air, drawing people into the heart of the carnival where food and culture merge in a symphony of flavor.`,
+  },
+  {
+    id: 5,
+    content: `Yet, beyond the festivities and pageantry, the Ezimo Cultural Carnival is an educational platform for the youth. It is a space where the younger generation is not only exposed to the richness of their heritage but is also empowered to carry the legacy of their ancestors into the future. Elders, revered for their wisdom and experience, share invaluable knowledge through stories, teachings, and songs, passing down the values that have sustained Ezimo for centuries.`,
+  },
+  {
+    id: 6,
+    content: `The carnival is a powerful reminder that the culture of Ezimo is alive and thriving. It’s where communal achievements are celebrated, where unity and togetherness take center stage, and where the bonds of family, tradition, and pride are reinforced. `,
+  },
+];
+
+export const carnivalContent2 = [
+  {
+    id: 1,
+    content: `The Ezimo Cultural Carnival is not just a festival — it's an awakening, a time when the town beats to the rhythm of its ancestors and every soul dances in unison. But to truly embrace this unforgettable experience, here are a few things every visitor should know before the magic begins.`,
+  },
+  {
+    id: 2,
+    content: `The next Ezimo Cultural Carnival will take place from December 27th to January 2nd, a week-long celebration timed with the festive season, when Ezimo is at its liveliest and most colorful. Whether you're a returning indigene or a curious traveler, prepare to have your mind blown — because this year's edition promises to be bigger, bolder, and more beautiful than ever.`,
+  },
+  {
+    id: 3,
+    content: `Entry is open to all — no tickets, no gates. Just walk into the spirit of celebration. From sunrise till well past sunset, the town’s compounds, roads, and open fields become stages for storytelling, music, and dance. You’ll hear the thunder of talking drums before you even see the masquerades. You’ll smell roasted corn, palm-wine, and native soups drifting through the air. And you’ll feel the warmth of a people proud to share their culture with the world.
+`,
+  },
+  {
+    id: 4,
+    content: `Visitors are free to capture the carnival’s magic — photos, videos, stories. But always ask before photographing elders, spiritual rites, or sacred masquerades. Respect is part of the rhythm here.`,
+  },
+];
+
+export const carnivalImages2 = [
+  {
+    id: 1,
+    image: '/assets/images/carnival1.jpg',
+  },
+  {
+    id: 2,
+    image: '/assets/images/carnival2.jpg',
+  },
+  {
+    id: 3,
+    image: '/assets/images/carnival3.jpg',
+  },
+  {
+    id: 4,
+    image: '/assets/images/carnival4.jpg',
+  },
+];
+export const carnivalImages1 = [
+  {
+    id: 1,
+    image: '/assets/images/carnival5.jpg',
+  },
+  {
+    id: 2,
+    image: '/assets/images/carnival6.jpg',
+  },
+  {
+    id: 3,
+    image: '/assets/images/carnival7.jpg',
+  },
+  {
+    id: 4,
+    image: '/assets/images/carnival8.jpg',
+  },
+];

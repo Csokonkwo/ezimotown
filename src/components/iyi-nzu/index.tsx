@@ -57,10 +57,10 @@ export default function AboutIyiNzu() {
                 className="object-cover block w-full h-full"
               /> */}
               <ScrollZoomImage
-              key={item.id}
-              src={item.image}
-               alt="Iyi-nzu Image"
-            />
+                key={item.id}
+                src={item.image}
+                alt="Iyi-nzu Image"
+              />
             </div>
           ))}
         </div>
