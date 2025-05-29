@@ -3,16 +3,17 @@ import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/utils/cn';
 import { Spinner } from '../spinner/spinner';
+import { motion } from 'motion/react';
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center whitespace-nowrap rounded-[10.2px] hover:bg-black text-sm font-medium transition-colors focus-visible:outline focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
         default:
-          'bg-black-8 borde cursor-pointer border-black-15 text-gray-60 shadow hover:bg-black-8/90',
+          'bg-black-8 cursor-pointer border-black-15 text-gray-60 border border-black-15  shadow hover:bg-black',
       },
       size: {
-        default: 'h-14 py-2 rounded-lg',
+        default: 'h-10 lg:h-14 lg:py-3 px-4.5',
         sm: 'h-8 rounded-md px-3 text-xs',
         lg: 'h-10 rounded-md px-8',
         icon: 'size-5',

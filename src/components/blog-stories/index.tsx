@@ -19,7 +19,6 @@ export default function BlogStories() {
         </div>
         <div>
           <Button
-            size="sm"
             icon={<ArrowIcon />}
             className="font-helvetica  text-[10px] sm:text-[12px]  md:text-lg text-gray-60 rounded-[10.2px]"
           >
@@ -48,14 +47,13 @@ export default function BlogStories() {
               className="rounded-[10.2px] mb-4 max-h-[100px]  md:max-h-[188px] object-cover w-[434px] h-[188px] transition-transform duration-500 group-hover:scale-105"
             />
 
-            <motion.p className="font-400 text-[12px] underline sm:no-underline sm:text-base text-white mb-2">
+            <motion.p className="font-normal text-[12px] underline sm:no-underline sm:text-base text-white mb-2">
               {blog.content}
             </motion.p>
             <motion.h6 className="text-[#98989A] mb-4 hidden md:block">
               {blog.categories}
             </motion.h6>
             <Button
-              size="lg"
               icon={<ArrowIcon />}
               className="bg-black-8 hidden md:flex rounded-[10.2px] text-gray-60 text-lg font-normal w-full"
             >

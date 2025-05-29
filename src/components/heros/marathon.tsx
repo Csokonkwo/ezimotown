@@ -98,8 +98,9 @@ const MarathonHero = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-white font-helvetica mx-auto max-w-[179px] sm:max-w-sm md:max-w-[893px] text-[7.21px] sm:text-sm md:text-lg font-normal text-center"
             >
-             The Ezimo Cultural Carnival is an explosion of tradition, where music, dance, and ancestral
-             pride fill the streets in a dazzling display of Igbo culture.
+              The Ezimo Cultural Carnival is an explosion of tradition, where
+              music, dance, and ancestral pride fill the streets in a dazzling
+              display of Igbo culture.
             </motion.p>
           </div>
           {/* content */}
@@ -116,12 +117,12 @@ const MarathonHero = () => {
               transition={{ delay: 0.5 }}
             >
               <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
-              A Celebration of Heritage
+                A Celebration of Heritage
               </h3>
               <p className="font-helvetica text-center text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs md:text-sm">
-               From masquerades to folklore reenactments, 
-                the carnival immerses visitors in Ezimo’s vibrant spirit — 
-                a journey through the sights, sounds, and soul of our people.
+                From masquerades to folklore reenactments, the carnival immerses
+                visitors in Ezimo’s vibrant spirit — a journey through the
+                sights, sounds, and soul of our people.
               </p>
             </motion.div>
             <motion.div
@@ -132,12 +133,12 @@ const MarathonHero = () => {
               data-aos="fade-left"
             >
               <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
-              Where Culture Comes Alive
+                Where Culture Comes Alive
               </h3>
               <p className="font-helvetica text-center text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs md:text-sm">
-              Held annually with pride, this festive gathering unites 
-                generations, showcasing Ezimo’s rich customs, native
-                attire, and timeless unity in one unforgettable celebration.
+                Held annually with pride, this festive gathering unites
+                generations, showcasing Ezimo’s rich customs, native attire, and
+                timeless unity in one unforgettable celebration.
               </p>
             </motion.div>
           </div>

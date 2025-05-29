@@ -27,6 +27,7 @@ html {
 @theme {
   --color-black-8: #141414;
   --color-black-15: #262626;
+  --color-black-10: #1a1a1a;
   --color-gray-60: #98989a;
   --color-gray-80: #cccccc;
   --font-poppins: Poppins, sans-serif;
@@ -52,6 +53,15 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.black-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(20, 20, 20, 0) 0%,
+    rgba(20, 20, 20, 0.880208) 75.52%,
+    #141414 100%
+  );
 }
 
 .embla {

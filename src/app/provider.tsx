@@ -13,6 +13,8 @@ import MainErrorFallback from '@/components/errors/main';
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
 import { usePathname } from 'next/navigation';
+import { AuthLoader } from '@/lib/auth';
+import { Spinner } from '@/components/ui/spinner';
 
 type AppProviderProps = {
   children: React.ReactNode;
@@ -43,7 +45,15 @@ export const AppProvider = ({ children }: AppProviderProps) => {
       <QueryClientProvider client={queryClient}>
         {process.env.DEV && <ReactQueryDevtools />}
         <ToastContainer position="top-right" autoClose={4000} />
-        {children}
+        <AuthLoader
+          renderLoading={() => (
+            <div className="flex relative h-screen w-screen bg-black items-center justify-center">
+              <Spinner size="xl" />
+            </div>
+          )}
+        >
+          {children}
+        </AuthLoader>
       </QueryClientProvider>
     </ErrorBoundary>
   );

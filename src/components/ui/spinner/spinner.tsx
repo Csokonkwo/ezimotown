@@ -1,4 +1,5 @@
 import { cn } from '@/utils/cn';
+import Image from 'next/image';
 
 const sizes = {
   sm: 'h-4 w-4',
@@ -25,7 +26,7 @@ export const Spinner = ({
 }: SpinnerProps) => {
   return (
     <>
-      <svg
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -43,7 +44,14 @@ export const Spinner = ({
         )}
       >
         <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-      </svg>
+      </svg> */}
+      <Image
+        src="/assets/logo/ezimo_logo.png"
+        alt="Loading..."
+        width={100}
+        height={100}
+        className="animate-bounce"
+      />
       <span className="sr-only">Loading</span>
     </>
   );

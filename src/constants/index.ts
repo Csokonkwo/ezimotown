@@ -189,6 +189,71 @@ export const blogs = [
     categories: 'Football',
   },
 ];
+export const blogNews = [
+  {
+    id: 1,
+    image: '/assets/images/borehole.jpg',
+    content:
+      'New Boreholes Commissioned in Ezimo Uno and Agu — Clean Water Access Expands',
+    category: 'General',
+  },
+  {
+    id: 2,
+    image: '/assets/images/chiefs.jpeg',
+    content:
+      'Cultural Royalty: Traditional Chiefs Lead Grand Procession at Ezimo Carnival Opening Ceremony',
+    category: 'Carnival',
+  },
+  {
+    id: 3,
+    image: '/assets/images/footbal-tournament.jpeg',
+    content:
+      'Injury-Time Goal Sends Okpuhu United to Football Tournament Semifinals in Dramatic Fashion',
+    category: 'Football',
+  },
+  {
+    id: 4,
+    image: '/assets/images/blog4.jpg',
+    content:
+      'Rising Star: 17-Year-Old Striker Shines in Ezimo Annual Football Finals',
+    category: 'Football',
+  },
+  {
+    id: 5,
+    image: '/assets/images/blog5.jpeg',
+    content:
+      'Ezimo Carnival 2025 Set to Feature Over 20 Masquerade Groups from Across Enugu',
+    category: 'Carnival',
+  },
+  {
+    id: 6,
+    image: '/assets/images/blog6.jpeg',
+    content:
+      'Record Turnout at This Year’s Ezimo Marathon as Locals and Diaspora Race Through Ancestral Trails',
+    category: 'Marathon',
+  },
+  {
+    id: 7,
+    image: '/assets/images/blog7.jpeg',
+    content:
+      'Women Lead the Charge: First All-Female Team Competes in Ezimo Annual Marathon',
+    category: 'Marathon',
+  },
+  {
+    id: 8,
+    image: '/assets/images/blog8.jpeg',
+    content:
+      'Ezimo Carnival 2025 to Debut New Youth Talent Stage for Traditional Dance & Music',
+    category: 'Carnival',
+  },
+  {
+    id: 9,
+    image: '/assets/images/blog9.jpeg',
+    content:
+      'Rain Delays, Big Wins, and Surprises: Highlights from Day 3 of the Ezimo Football Tournament',
+    category: 'Football',
+  },
+];
 
 export const iyiNzuImages = [
   {
@@ -427,8 +492,6 @@ export const carnivalImages1 = [
   },
 ];
 
-
-
 export const marathonContent1 = [
   {
     id: 1,
@@ -491,3 +554,41 @@ export const marathonImages2 = [
     image: '/assets/images/marathon8.jpg',
   },
 ];
+
+export const blogContent = {
+  heroTitle: 'More Boreholes are being Built in Ezimo',
+  sections: [
+    {
+      title: 'Introduction',
+      content:
+        'Ezimo Town, nestled in the heart of Enugu State, has long been recognized for its vibrant community, deep-rooted culture, and natural beauty. However, in recent years, a new wave of development has been sweeping through the town — one that seeks to address a fundamental need: water. Traditionally known for its fertile farmlands and bustling local markets, Ezimo is now making strides towards improving its water infrastructure.',
+    },
+    {
+      title: 'Background: The Water Challenge in Ezimo',
+      content:
+        'Before the advent of boreholes, many of the people in Ezimo faced significant challenges in accessing clean and safe water. Water sources were often far and limited, leading to long walks, especially for women and children, who had to trek miles to fetch water from rivers, streams, and other natural sources. These sources were not always reliable and were frequently contaminated, leading to waterborne diseases. The introduction of boreholes has not only alleviated these challenges but has also significantly reduced the time spent fetching water. Now, water is much more accessible, allowing families to focus on other important activities like farming, education, and health. This chapter delves into the history of water access issues in Ezimo, the efforts to resolve them, and the social and economic transformation that has been set in motion by these vital infrastructure projects.',
+    },
+    {
+      title: 'Community Needs and Government Response',
+      content:
+        'One of the most prominent applications of AI in healthcare is in diagnostic imaging. AI algorithms have Boreholes in Ezimo have not only improved access to clean water but have also had a profound effect on the overall development of the town. Access to reliable water sources is crucial for the community’s daily operations, from agriculture to household chores, and has a significant impact on the local economy.',
+    },
+  ],
+  metadata: {
+    publicationDate: 'January 16, 2025',
+    category: 'General',
+    readingTime: '10 Min',
+    authorName: 'Dr. James Okonkwo',
+  },
+  tableOfContents: [
+    'Introduction',
+    'Background: The Water Challenge in Ezimo',
+    'Community Needs and Government Response',
+    'Locations of the New Boreholes',
+    'Voices from the Community',
+    'Impact on Health and Daily Life',
+    'Challenges Faced During Construction',
+    'The Future of Good Water Supply in Ezimo',
+    'Conclusion',
+  ],
+};

@@ -2,10 +2,6 @@
 import React, { useRef } from 'react';
 import { motion } from 'motion/react';
 import {
-  carnivalContent,
-  carnivalContent2,
-  carnivalImages1,
-  carnivalImages2,
   marathonContent1,
   marathonImages1,
   marathonImages2,
@@ -56,7 +52,7 @@ export default function EzimoMarathon() {
           ))}
         </div>
       </motion.div>
-      
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

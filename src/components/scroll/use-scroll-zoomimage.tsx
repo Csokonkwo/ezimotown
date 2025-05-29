@@ -21,7 +21,7 @@ export default function ScrollZoomText({
     <motion.div
       ref={ref}
       style={{ scale, opacity }}
-      className={`${className ?? 'text-center mx-auto px-4 md:px-10'}`}
+      className={`${className ?? 'text-center mx-auto px-4 md:px-10 will-change-transform'}`}
     >
       {children}
     </motion.div>
