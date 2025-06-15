@@ -6,7 +6,6 @@ import {
 } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import React, { useCallback, useEffect, useRef } from 'react';
-import { useDotButton } from './carousel-dot-buttons';
 import {
   NextButton,
   PrevButton,
@@ -30,8 +29,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const tweenFactor = useRef(0);
   const tweenNodes = useRef<HTMLElement[]>([]);
 
-  const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi);
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -102,7 +99,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       .on('reInit', tweenScale)
       .on('scroll', tweenScale)
       .on('slideFocus', tweenScale);
-  }, [emblaApi, tweenScale]);
+  }, [emblaApi, tweenScale, setTweenFactor, setTweenNodes]);
   return (
     <div className="embla">
       {/* embla controls */}
@@ -118,7 +115,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {slides.map((img, index) => (
             <div className="embla__slide" key={img.id}>
-              {/* <div className="embla__slide__number">{index + 1}</div> */}
               <Image
                 src={img.image}
                 alt={`Slide ${index}`}

@@ -1,13 +1,9 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
-import { motion, useAnimation, useInView, useScroll } from 'motion/react';
-import ScrollZoomText from '../scroll/use-scroll-zoomimage';
-import { Button } from '../ui/buttons';
-import BlogContentSection from './blog-section';
+import { motion, useAnimation, useInView } from 'motion/react';
 
 export default function EzimoBlog() {
   const scrollRef = useRef(null);
-  const { scrollYProgress } = useScroll();
   const toRef = useRef(null);
   const inView = useInView(toRef, { once: true });
   const controls = useAnimation();
@@ -40,7 +36,7 @@ export default function EzimoBlog() {
         </motion.h2>
       </div>
 
-      <BlogContentSection />
+      {/* <BlogContentSection /> */}
     </section>
   );
 }

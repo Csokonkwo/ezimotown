@@ -14,7 +14,7 @@ export default function OurHome() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ root: scrollRef }}
-        transition={{ delay: 0.5 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
         className="text-center"
       >
         <h2 className="text-white font-bold font-poppins text-xl sm:text-4xl md:text-6xl lg:text-6xl mb-3 lg:mb-4">

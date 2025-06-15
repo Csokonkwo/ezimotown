@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import { motion } from 'motion/react';
 import { footballContent, footballImages1, footballImages2 } from '@/constants';
 import ScrollZoomImage from '../scroll/use-zoom-image';
-import ScrollZoomText from '../scroll/use-scroll-zoomimage';
+import ScrollZoomText from '../scroll/use-scroll-zoomtext';
 
 export default function EzimoFootball() {
   const scrollRef = useRef(null);

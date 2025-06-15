@@ -8,7 +8,7 @@ import {
   carnivalImages2,
 } from '@/constants';
 import ScrollZoomImage from '../scroll/use-zoom-image';
-import ScrollZoomText from '../scroll/use-scroll-zoomimage';
+import ScrollZoomText from '../scroll/use-scroll-zoomtext';
 
 export default function EzimoCarnival() {
   const scrollRef = useRef(null);

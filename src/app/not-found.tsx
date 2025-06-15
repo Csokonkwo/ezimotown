@@ -1,4 +1,3 @@
-import { paths } from '@/config/paths';
 import Link from 'next/link';
 
 const NotFoundPage = () => {

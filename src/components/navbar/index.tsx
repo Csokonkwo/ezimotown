@@ -4,13 +4,11 @@ import { motion } from 'motion/react';
 import { navLinks } from '@/constants';
 import Link from 'next/link';
 import Image from 'next/image';
-import useNavbarScroll from '@/hooks/use-navbar-scroll';
 import MobileNav from '../mobile-menu';
 
 const Navbar = () => {
   const scrollRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const { scrolled } = useNavbarScroll();
   return (
     <>
       <header
@@ -28,10 +26,10 @@ const Navbar = () => {
               <Image
                 src="/assets/logo/ezimo_logo.png"
                 alt="Logo icon"
-                loading="lazy"
                 width={1512}
                 height={982}
                 className="object-contain"
+                priority
               />
             </Link>
             {/* logo */}
@@ -86,7 +84,7 @@ const Navbar = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ root: scrollRef }}
-              transition={{ duration: 0.8 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
               className="text-white font-poppins font-bold text-4xl md:text-7xl lg:text-8xl md:mb-2"
             >
               Explore <br /> Ezimo Town
@@ -95,7 +93,7 @@ const Navbar = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ root: scrollRef }}
-              transition={{ delay: 0.3, duration: 0.8 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
               className="text-white font-helvetica mx-auto max-w-[179px] sm:max-w-sm md:max-w-[496px] text-[7.21px] sm:text-sm md:text-lg font-normal text-center"
             >
               Ezimo Town is rich in Heritage and History. The Town is home to
@@ -113,7 +111,7 @@ const Navbar = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ root: scrollRef }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
             >
               <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
                 Cultural and Historical Insights
@@ -128,8 +126,7 @@ const Navbar = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ root: scrollRef }}
-              transition={{ delay: 0.5 }}
-              data-aos="fade-left"
+              transition={{ delay: 0.5, duration: 0.8 }}
             >
               <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
                 Community and Lifestyle

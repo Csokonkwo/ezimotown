@@ -7,9 +7,6 @@ import { motion } from 'motion/react';
 import MobileGallery from './mobile-gallery';
 
 const OPTIONS: EmblaOptionsType = { loop: true };
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
-
 export default function GallerySection() {
   const scrollRef = useRef(null);
   return (

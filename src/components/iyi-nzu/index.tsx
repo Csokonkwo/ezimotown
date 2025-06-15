@@ -1,7 +1,6 @@
 'use client';
 import React, { useRef } from 'react';
 import { motion } from 'motion/react';
-import Image from 'next/image';
 import { iyiNzuImages } from '@/constants';
 import ScrollZoomImage from '../scroll/use-zoom-image';
 
@@ -47,7 +46,7 @@ export default function AboutIyiNzu() {
         className="mt-12 lg:mt-[93px]"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 md:gap-0 w-full m-0 p-0">
-          {iyiNzuImages.map((item, index) => (
+          {iyiNzuImages.map((item) => (
             <div key={item.id} className="w-full h-full cursor-pointer m-0 p-0">
               {/* <Image
                 src={item.image}

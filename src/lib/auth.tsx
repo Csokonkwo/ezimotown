@@ -6,7 +6,6 @@ import Cookies from 'js-cookie';
 import { configureAuth } from 'react-query-auth';
 import { useEffect } from 'react';
 import { paths } from '@/config/paths';
-import { useUserStore } from '@/hooks/user-store';
 import { setCookie } from './utils';
 
 const getUser = async (): Promise<User | null> => {

@@ -91,9 +91,14 @@ export const navLinks = [
     url: '/marathon',
   },
   {
-    id: 'blog',
+    id: 'calendar',
+    title: 'Calendar',
+    url: '/calendar',
+  },
+  {
+    id: 'blogs',
     title: 'Blog',
-    url: '/blog',
+    url: '/blogs',
   },
 ];
 

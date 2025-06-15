@@ -17,11 +17,10 @@ export default function ScrollZoomImage({
   });
 
   const opacity = useTransform(scrollYProgress, [0, 0.2, 1], [0.8, 1, 0.8]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
   return (
     <motion.div
       ref={ref}
-      style={{ scale, opacity }}
+      style={{ opacity }}
       className="w-full h-full cursor-pointer"
     >
       <Image

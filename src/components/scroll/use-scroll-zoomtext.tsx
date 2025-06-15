@@ -6,7 +6,7 @@ export default function ScrollZoomText({
   className,
 }: {
   children: React.ReactNode;
-  className?: String;
+  className?: string;
 }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({

@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { navLinks } from '@/constants';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const sidebarVariants = {
   hidden: { x: '-100%' },
@@ -33,6 +34,7 @@ export default function MobileNav({
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const scrollRef = useRef(null);
+  const pathname = usePathname();
   return (
     <AnimatePresence>
       {isOpen && (
@@ -74,7 +76,7 @@ export default function MobileNav({
 
           {/* navlinks */}
           <motion.ul
-            className="space-y-10 mt-24 text-center  text-white "
+            className="space-y-10 mt-24 text-center"
             ref={scrollRef}
             variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
             initial="hidden"
@@ -85,11 +87,11 @@ export default function MobileNav({
                 key={link.id}
                 variants={linkVariants}
                 role="listitem"
-                className="text-white mx-4 font-normal text-[20px] leading-[100%] tracking-[0%]"
+                className=" mx-4 font-normal text-[20px] leading-[100%] tracking-[0%]"
               >
                 <Link
                   href={link.url}
-                  className="hover:text-white/70 transition-colors"
+                  className={`hover:text-white/70 transition-colors ${pathname === link.url ? 'text-gold' : 'text-white'}`}
                 >
                   {link.title}
                 </Link>

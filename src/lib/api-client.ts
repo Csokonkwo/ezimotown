@@ -51,7 +51,7 @@ async function fetchApi<T>(
       ...(cookie ? { Cookie: cookie } : {}),
     },
     body: body ? JSON.stringify(body) : undefined,
-    credentials: 'include',
+    // credentials: 'include',
     cache,
     next,
   });
