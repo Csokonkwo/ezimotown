@@ -1,18 +1,3 @@
-export type BaseEntity = {
-  // id?: string;
-  // created_at?: string;
-};
-
-export type Entity<T> = {
-  [K in keyof T]: T[K];
-} & BaseEntity;
-
-export type Meta = {
-  page: number;
-  total: number;
-  totalPages: number;
-};
-
 export type User = {
   id: string;
   name: string;
@@ -27,7 +12,7 @@ export type User = {
   updated_at: string;
 };
 
-export type Setting = Entity<{
+export type Setting = {
   id: string;
   site_name: string;
   app_name: string;
@@ -42,7 +27,7 @@ export type Setting = Entity<{
   deleted_at?: string;
   created_at: string;
   updated_at: string;
-}>;
+};
 
 export type Verify = {
   email: string;

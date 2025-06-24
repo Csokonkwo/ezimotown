@@ -39,8 +39,9 @@ export const renderContent = (htmlString: string) => {
               return nodes.map(toText).join('');
             }
             if (React.isValidElement(nodes)) {
-              const children = (nodes as React.ReactElement<any>).props
-                .children;
+              const children = (
+                nodes as React.ReactElement<{ children?: React.ReactNode }>
+              ).props.children;
               return toText(children);
             }
             return '';
@@ -52,7 +53,7 @@ export const renderContent = (htmlString: string) => {
           }
 
           return (
-            <p className="font-helvetica text-[#FFE9D5] font-normal text-[6px] sm:text-sm md:text-lg text-start lg:max-w-[1389px] mb-4">
+            <p className="font-helvetica text-[#FFE9D5] font-normal text-[6px] sm:text-sm lg:text-lg text-start lg:max-w-[1389px] mb-4">
               {reactChildren}
             </p>
           );

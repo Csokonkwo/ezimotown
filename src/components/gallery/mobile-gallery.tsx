@@ -12,8 +12,8 @@ export default function MobileGallery() {
             width={392}
             height={485}
             alt={`Gallery Slides ${index}`}
-            objectFit="cover"
             className="object-cover"
+            style={{ width: 'auto', height: 'auto' }}
           />
         </div>
       ))}

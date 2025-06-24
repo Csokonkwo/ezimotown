@@ -14,18 +14,11 @@ const BlogHero = () => {
   return (
     <>
       <header
-        className={`relative bg-cover bg-top  bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[65vh] md:h-[100vh]`}
-        // style={{backgroundImage:`linear-gradient(180deg, rgba(0, 0, 0, 0) 64.71%, rgba(0, 0, 0, 0.9) 82.69%), url(/assets/images/blog-hero.jpg)`}}
+        className={`relative bg-cover bg-top  bg-no-repeat md:bg-center  w-full min-h-auto md:min-h-[65vh] lg:min-h-screen max-w-[1500px] overflow-hidden pb-5 lg:pb-0`}
+        style={{
+          backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 64.71%, rgba(0, 0, 0, 0.9) 82.69%), url(/assets/images/blog-hero.jpg)`,
+        }}
       >
-        {/* <div className="absolute opacity-20 inset-0 top-0 bg-[url(/assets/images/newspaper-overlay.jpg)]" /> */}
-        <Image
-          src="/assets/images/blog-hero.jpg"
-          alt="Blog Hero"
-          fill
-          priority // prevent flashing
-          className="object-cover object-top md:object-center z-0"
-        />
-
         {/* Top gradient */}
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/80 via-black/30 to-transparent pointer-events-none" />
 
@@ -62,7 +55,6 @@ const BlogHero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     whileHover={{ scale: 0.85 }}
                     whileTap={{ scale: 0.95 }}
-                    onHoverStart={() => console.log('hover started!')}
                     key={link.id}
                     role="listitem"
                     className=" mx-4 font-normal text-[20px] leading-[100%] tracking-[0%]"
@@ -88,7 +80,7 @@ const BlogHero = () => {
                   alt="hamburger icon"
                   width={16}
                   height={13}
-                  className="object-contain mr-6 md:hidden cursor-pointer"
+                  className="object-contain w-auto h-auto mr-6 md:hidden cursor-pointer"
                 />
               </button>
               {/* hamburger */}
@@ -114,7 +106,7 @@ const BlogHero = () => {
               whileInView={{ y: 0 }}
               viewport={{ root: scrollRef }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-white font-helvetica mx-auto max-w-[179px] sm:max-w-sm md:max-w-[893px] text-[7.21px] sm:text-sm md:text-lg font-normal text-center"
+              className="text-white font-helvetica mx-auto max-w-[179px] sm:max-w-sm md:max-w-[893px] text-[7.21px] sm:text-sm lg:text-lg font-normal text-center"
             >
               The Ezimo Cultural Carnival is an explosion of tradition, where
               music, dance, and ancestral Stories, voices, and vibrant moments
@@ -135,10 +127,10 @@ const BlogHero = () => {
               viewport={{ root: scrollRef }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
+              <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-xl lg:text-3xl font-normal mb-2 lg:mb-3">
                 Ezimo Voices: Stories That Shape Us
               </h3>
-              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs md:text-sm">
+              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs lg:text-sm">
                 Dive into the heartbeat of Ezimo through stories, opinions, and
                 reflections from our people. From historic tales to modern-day
                 triumphs,
@@ -151,10 +143,10 @@ const BlogHero = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               data-aos="fade-left"
             >
-              <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
+              <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-xl lg:text-3xl font-normal mb-2 lg:mb-3">
                 News, Culture & Community
               </h3>
-              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs md:text-sm">
+              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs lg:text-sm">
                 Stay informed and inspired with the latest updates, event
                 highlights, cultural insights, and community spotlights. Whether
                 you’re near or far, our blog keeps you connected to the life and

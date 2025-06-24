@@ -7,7 +7,7 @@ export default function History() {
   const scrollRef = useRef(null);
   return (
     <section
-      className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-[100vh] pb-[70px]"
+      className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-auto md:min-h-screen pb-[70px]"
       style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
     >
       <motion.div
@@ -17,10 +17,10 @@ export default function History() {
         transition={{ delay: 0.5, duration: 0.8 }}
         className="text-center"
       >
-        <h2 className="text-white font-bold font-poppins text-xl sm:text-4xl md:text-6xl lg:text-6xl mb-3 lg:mb-4">
+        <h2 className="text-white font-bold font-poppins text-xl sm:text-4xl lg:text-6xl mb-3 lg:mb-4">
           The History of Ezimo Town
         </h2>
-        <p className="font-helvetica text-white max-w-xs sm:max-w-md md:max-w-2xl mx-auto lg:max-w-[914px] font-normal text-[6px] sm:text-sm md:text-lg text-center">
+        <p className="font-helvetica text-white max-w-xs sm:max-w-md md:max-w-2xl mx-auto lg:max-w-[914px] font-normal text-[6px] sm:text-sm lg:text-lg text-center">
           {`We are pleased to grace you with the beautiful history of our town and
           to show you how far the people of Ezimo town have developed and
           fostered family and love`}

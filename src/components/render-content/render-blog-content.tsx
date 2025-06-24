@@ -27,6 +27,7 @@ export const renderBlogContent = (htmlString: string) => {
             return child;
           });
 
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           const reactChildren = domToReact(processedChildren as any, options);
 
           // SAFELY flatten and extract text content
@@ -37,6 +38,7 @@ export const renderBlogContent = (htmlString: string) => {
               return nodes.map(toText).join('');
             }
             if (React.isValidElement(nodes)) {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               const children = (nodes as React.ReactElement<any>).props
                 .children;
               return toText(children);

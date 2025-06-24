@@ -51,7 +51,7 @@ export default function CarnivalLists() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ root: scrollRef }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-white font-bold font-poppins text-xl sm:text-4xl md:text-6xl lg:text-6xl mb-3 lg:mb-4"
+            className="text-white font-bold font-poppins text-xl sm:text-3xl md:text-4xl lg:text-6xl mb-3 lg:mb-4"
           >
             {item.title}
           </motion.h2>
@@ -72,7 +72,7 @@ export default function CarnivalLists() {
               <ScrollZoomImage
                 key={img.id}
                 src={`${process.env.NEXT_PUBLIC_URL}/${img.path}`}
-                alt="Carnival Images"
+                alt={`${img.label} Images`}
               />
             )),
           )}

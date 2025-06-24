@@ -31,7 +31,7 @@ export default function MarathonLists() {
   if (!marathon || marathon.length === 0) {
     return (
       <section
-        className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-[100vh] pb-[70px] px-0"
+        className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] md:min-h-screen pb-[70px] px-0 overflow-hidden"
         style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
       >
         <p className="font-helvetica text-white font-normal text-[6px] sm:text-sm md:text-lg text-center lg:max-w-[1389px] mb-4">
@@ -42,7 +42,7 @@ export default function MarathonLists() {
   }
   return (
     <section
-      className="w-full relative bg-blend-overlay bg-black/90  bg-cover bg-top pt-12 md:pt-[67px] min-h-[100vh] pb-[70px] px-0"
+      className="w-full relative bg-blend-overlay bg-black/90  bg-cover bg-top pt-12 md:pt-[67px] min-h-auto md:min-h-screen pb-[70px] px-0 overflow-hidden"
       style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
     >
       {marathon?.map((item) => (
@@ -73,7 +73,7 @@ export default function MarathonLists() {
               <ScrollZoomImage
                 key={img.id}
                 src={`${process.env.NEXT_PUBLIC_URL}/${img.path}`}
-                alt="Marathon Images"
+                alt={`${img.label} Images`}
               />
             )),
           )}

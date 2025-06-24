@@ -1,44 +1,48 @@
-'use client'
+'use client';
 import Image from 'next/image';
 import React, { useRef } from 'react';
-import {motion} from 'motion/react'
+import { motion } from 'motion/react';
+import CountdownTimer from '@/components/timer';
 
 export default function CalendarLists() {
-    const scrollRef = useRef(null);
+  const scrollRef = useRef(null);
   return (
     <section
-      className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-[100vh] pb-[70px] px-0"
+      className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-auto lg:min-h-screen pb-[70px] px-0"
       style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
     >
-      <div className="overflow-hidden px-8">
+      <CountdownTimer />
+      <div className="overflow-hidden px-4 md:px-8">
         <motion.div
-         initial={{scale:1, y: 10 }}
-         whileInView={{ y: 0 }}
-         viewport={{ root: scrollRef }}
-         transition={{ delay: 0.5,duration:0.8 }}
-         className="w-full overflow-hidden pb-20">
+          initial={{ scale: 1, y: 10 }}
+          whileInView={{ y: 0 }}
+          viewport={{ root: scrollRef }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="w-full overflow-hidden pb-20"
+        >
           <motion.h5 className="-mb-4 text-lg text-center font-normal text-white capitalize leading-[30px] overflow-hidden">
             Event calender
           </motion.h5>
           <motion.div className="opacity-20 w-[144px] h-[15px] mx-auto bg-gold overflow-hidden"></motion.div>
-          <motion.h2 className="lg:text-[50px] text-center font-poppins mt-2  text-4xl font-medium overflow-hidden lg:leading-[62px] text-white w-full">
+          <motion.h2 className="lg:text-[50px] text-center font-poppins mt-2 text-xl xs:text-2xl sm:text-3xl md:text-4xl font-medium overflow-hidden lg:leading-[62px] text-white w-full">
             10 days of fun filled activities
           </motion.h2>
         </motion.div>
 
         {/* calendar schedule */}
-        <motion.div className="max-w-7xl mx-auto mt-10">
+        <motion.div className="max-w-7xl mx-auto lg:mt-10">
           <div className="flex flex-col">
             {/* children */}
             <div className="flex gap-6 items-center">
               {/* colored rectangle */}
               <motion.div
-                initial={{scale:1, y: 10 }}
+                initial={{ scale: 1, y: 10 }}
                 whileInView={{ y: 0 }}
-                whileHover={{scale:1.02}}
+                whileHover={{ scale: 1.02 }}
                 viewport={{ root: scrollRef }}
                 transition={{ delay: 0.3, duration: 0.8 }}
-              className="bg-gold w-[10%] flex flex-col items-center justify-center pt-14 md:gap-[72px] gap-20 h-[300px]">
+                className="bg-gold md:w-[10%] flex flex-col items-center justify-center pt-14 md:gap-[72px] gap-20 h-[300px]"
+              >
                 <motion.p className="text-white font-helvetica font-medium text-xl capitalize">
                   start day
                 </motion.p>
@@ -64,11 +68,11 @@ export default function CalendarLists() {
                       </div>
                     </div>
                     <motion.div
-                     initial={{scale:1, y: 10 }}
-                     whileInView={{ y: 0 }}
-                     whileHover={{x: 10}}
-                     viewport={{ root: scrollRef }}
-                     transition={{ delay: 0.5,duration:0.8 }}
+                      initial={{ scale: 1, y: 10 }}
+                      whileInView={{ y: 0 }}
+                      whileHover={{ x: 10 }}
+                      viewport={{ root: scrollRef }}
+                      transition={{ delay: 0.5, duration: 0.8 }}
                     >
                       <Image
                         src="/assets/logo/ezimo_logo.png"
@@ -82,26 +86,27 @@ export default function CalendarLists() {
                   </div>
                   {/* caldendar img */}
                   {/* calendar content */}
-                  <motion.div 
-                   initial={{scale:1, y: 10 }}
-                   whileInView={{ y: 0 }}
-                   whileHover={{x: 10}}
-                   transition={{ delay: 0.5,duration:0.8 }}
-                  className="lg:ml-8 pt-8 lg:pt-0">
+                  <motion.div
+                    initial={{ scale: 1, y: 10 }}
+                    whileInView={{ y: 0 }}
+                    whileHover={{ x: 10 }}
+                    transition={{ delay: 0.5, duration: 0.8 }}
+                    className="lg:ml-8 pt-8 lg:pt-0"
+                  >
                     <p className="text-xs text-white mb-4 capitalize">
                       Flag Off-Ezimo Municipality, Enugu
                     </p>
                     <h6 className="font-medium text-lg text-white mb-4 font-poppins capitalize">
-                      Chrismas Tree Lighting, Carnival Ezimo & Festival
-                      Lottery Raffle/Draws
+                      Chrismas Tree Lighting, Carnival Ezimo & Festival Lottery
+                      Raffle/Draws
                     </h6>
                     <p className="text-xs text-white mb-4 capitalize">
-                      Announcing The Season Of Christmas In Enugu State 
-                      Major Cities - Ezimo
+                      Announcing The Season Of Christmas In Enugu State Major
+                      Cities - Ezimo
                     </p>
                     <p className="text-xs text-white mb-4 capitalize">
-                      This Night Births Flickers And Illumination In These Cities, For A
-                      Sleepless And Bustling 32 Days.
+                      This Night Births Flickers And Illumination In These
+                      Cities, For A Sleepless And Bustling 32 Days.
                     </p>
                     <p className="text-xs text-white capitalize">
                       Tree Lighting Raffle Draws: -Ezimo Prize 20k

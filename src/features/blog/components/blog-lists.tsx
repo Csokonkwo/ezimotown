@@ -12,7 +12,6 @@ export default function BlogLists() {
   const controls = useAnimation();
   const blogsQuery = useGetBlogPosts();
   const blogs = blogsQuery?.data?.data;
-  console.log(blogs);
 
   useEffect(() => {
     if (inView) {

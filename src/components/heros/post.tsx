@@ -7,7 +7,7 @@ import Image from 'next/image';
 import MobileNav from '../mobile-menu';
 import { usePathname } from 'next/navigation';
 
-const PostHero = () => {
+export default function PostHero() {
   const scrollRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
@@ -60,7 +60,6 @@ const PostHero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     whileHover={{ scale: 0.85 }}
                     whileTap={{ scale: 0.95 }}
-                    onHoverStart={() => console.log('hover started!')}
                     key={link.id}
                     role="listitem"
                     className=" mx-4 font-normal text-[20px] leading-[100%] tracking-[0%]"
@@ -86,7 +85,7 @@ const PostHero = () => {
                   alt="hamburger icon"
                   width={16}
                   height={13}
-                  className="object-contain mr-6 md:hidden cursor-pointer"
+                  className="object-contain w-auto h-auto mr-6 md:hidden cursor-pointer"
                 />
               </button>
               {/* hamburger */}
@@ -107,65 +106,10 @@ const PostHero = () => {
             >
               Post Details
             </motion.h1>
-            {/* <motion.p
-              initial={{ y: 10 }}
-              whileInView={{ y: 0 }}
-              viewport={{ root: scrollRef }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-white font-helvetica mx-auto max-w-[179px] sm:max-w-sm md:max-w-[893px] text-[7.21px] sm:text-sm md:text-lg font-normal text-center"
-            >
-              The Ezimo Cultural Carnival is an explosion of tradition, where
-              music, dance, and ancestral Stories, voices, and vibrant moments
-              from Ezimo — where heritage, culture, and community come alive
-              through everyday life.
-            </motion.p> */}
           </div>
-          {/* content */}
-          {/* cultural */}
-          {/* <div
-            className="flex justify-between w-full mt-10 lg:mt-24 px-8 lg:px-[94px]"
-            ref={scrollRef}
-            style={{ overflow: 'scroll' }}
-          >
-            <motion.div
-              initial={{ y: 20 }}
-              whileInView={{ y: 0 }}
-              viewport={{ root: scrollRef }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-            >
-              <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
-                Ezimo Voices: Stories That Shape Us
-              </h3>
-              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs md:text-sm">
-                Dive into the heartbeat of Ezimo through stories, opinions, and
-                reflections from our people. From historic tales to modern-day
-                triumphs,
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ y: 20 }}
-              whileInView={{ y: 0 }}
-              viewport={{ root: scrollRef }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              data-aos="fade-left"
-            >
-              <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
-                News, Culture & Community
-              </h3>
-              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs md:text-sm">
-                Stay informed and inspired with the latest updates, event
-                highlights, cultural insights, and community spotlights. Whether
-                you’re near or far, our blog keeps you connected to the life and
-                soul of Ezimo.
-              </p>
-            </motion.div>
-          </div> */}
-          {/* cultural */}
         </div>
       </header>
       <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );
-};
-
-export default PostHero;
+}

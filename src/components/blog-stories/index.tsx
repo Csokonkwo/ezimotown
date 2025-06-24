@@ -54,7 +54,7 @@ export default function BlogStories() {
 
   if (!posts || posts.length === 0) {
     return (
-      <section className="w-full relative  bg-black pt-8 pb-6 sm:pt-16 md:pt-22.5 lg:pt-[67px] min-h-auto lg:min-h-[100vh] px-4  lg:px-20">
+      <section className="w-full relative  bg-black pt-8 pb-6 sm:pt-16 md:pt-22.5 lg:pt-[67px] min-h-auto md:min-h-screen px-4  lg:px-20">
         <p className="font-normal text-[12px] underline sm:no-underline sm:text-base text-white mb-2">
           No blogs to show
         </p>
@@ -69,89 +69,87 @@ export default function BlogStories() {
   };
 
   return (
-    <>
-      <section className="w-full relative  bg-black pt-8 pb-6 sm:pt-16 md:pt-22.5 lg:pt-[67px] min-h-auto  px-4  lg:px-20">
-        <div className="flex justify-between items-center pb-8 md:pb-16">
-          <div>
-            <motion.h6 className="text-gray-80 text-[12px] sm:text-xl md:text-2xl font-normal">
-              Latest news from Our Blog Stories
-            </motion.h6>
-          </div>
-          <Link href={paths.posts.getHref()}>
-            <Button
-              icon={<ArrowIcon />}
-              className="font-helvetica  text-[10px] sm:text-[12px]  md:text-lg text-gray-60 rounded-[10.2px]"
+    <section className="w-full relative  bg-black pt-8 pb-6 sm:pt-16 md:pt-22.5 lg:pt-[67px] min-h-auto md:min-h-screen  px-4  lg:px-20 overflow-hidden">
+      <div className="flex justify-between items-center pb-8 md:pb-16">
+        <div>
+          <motion.h6 className="text-gray-80 text-[12px] sm:text-xl md:text-2xl font-normal">
+            Latest news from Our Blog Stories
+          </motion.h6>
+        </div>
+        <Link href={paths.posts.getHref()}>
+          <Button
+            icon={<ArrowIcon />}
+            className="font-helvetica  text-[10px] sm:text-[12px]  md:text-lg text-gray-60 rounded-[10.2px]"
+          >
+            See More
+          </Button>
+        </Link>
+      </div>
+
+      {/* blog story card */}
+      <div className="grid grid-cols-2  md:grid-cols-3 gap-6 items-center justify-center mx-auto overflow-hidden">
+        {paginatedPosts?.map((post) => {
+          const imgs = post.images.map((img) => ({
+            src: `${process.env.NEXT_PUBLIC_URL}/${img?.path}`,
+            alt: img.label,
+          }));
+          return (
+            <motion.div
+              key={post.id}
+              variants={cardVariant}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ root: scrollRef }}
+              className="group cursor-pointer"
             >
-              See More
-            </Button>
-          </Link>
-        </div>
-
-        {/* blog story card */}
-        <div className="grid grid-cols-2  md:grid-cols-3 gap-6 items-center justify-center mx-auto">
-          {paginatedPosts?.map((post) => {
-            const imgs = post.images.map((img) => ({
-              src: `${process.env.NEXT_PUBLIC_URL}/${img?.path}`,
-              alt: img.label,
-            }));
-            return (
-              <motion.div
-                key={post.id}
-                variants={cardVariant}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ root: scrollRef }}
-                className="group cursor-pointer"
+              {/* Image Container with Overlay */}
+              <div
+                className="relative rounded-[10.2px] overflow-hidden mb-4"
+                onClick={() => handleImageClick(imgs, 0)}
               >
-                {/* Image Container with Overlay */}
-                <div
-                  className="relative rounded-[10.2px] overflow-hidden mb-4"
-                  onClick={() => handleImageClick(imgs, 0)}
-                >
-                  <Image
-                    src={imgs[0]?.src}
-                    alt={imgs[0]?.alt}
-                    width={434}
-                    height={188}
-                    className="max-h-[100px] md:max-h-[188px] object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                  />
-                  {/* Overlay for hover effect */}
-                  <div className="absolute inset-0 bg-black/40 bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    <MagnifyIcon className="text-gold w-10 h-10 md:w-14 md:h-14" />
-                  </div>
+                <Image
+                  src={imgs[0]?.src}
+                  alt={imgs[0]?.alt}
+                  width={434}
+                  height={188}
+                  className="max-h-[100px] md:max-h-[188px] object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                />
+                {/* Overlay for hover effect */}
+                <div className="absolute inset-0 bg-black/40 bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <MagnifyIcon className="text-gold w-10 h-10 md:w-14 md:h-14" />
                 </div>
+              </div>
 
-                <motion.p className="font-normal text-[12px] sm:text-base text-white mb-2 line-clamp-1">
-                  {post?.title}
-                </motion.p>
-                <motion.h6 className="text-[#98989A] mb-4">
-                  {post?.category?.name}
-                </motion.h6>
-                <Link href={paths.post.getHref(post?.slug)}>
-                  <Button
-                    icon={<ArrowIcon />}
-                    className="bg-black-8 rounded-[10.2px] text-gray-60 text-lg font-normal w-full"
-                  >
-                    Read More
-                  </Button>
-                </Link>
-              </motion.div>
-            );
-          })}
-        </div>
-        {/* blog story card */}
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={setCurrentpage}
-        />
-        <LightBoxGallery
-          slides={lightImages}
-          startIndex={currentIndex}
-          open={isOpen}
-          onClose={() => setIsOpen(false)}
-        />
-      </section>
-    </>
+              <motion.p className="font-normal text-[12px] sm:text-base text-white mb-2 line-clamp-1">
+                {post?.title}
+              </motion.p>
+              <motion.h6 className="text-[#98989A] mb-4">
+                {post?.category?.name}
+              </motion.h6>
+              <Link href={paths.post.getHref(post?.slug)}>
+                <Button
+                  icon={<ArrowIcon />}
+                  className="bg-black-8 rounded-[10.2px] text-gray-60 text-lg font-normal w-full"
+                >
+                  Read More
+                </Button>
+              </Link>
+            </motion.div>
+          );
+        })}
+      </div>
+      {/* blog story card */}
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentpage}
+      />
+      <LightBoxGallery
+        slides={lightImages}
+        startIndex={currentIndex}
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+      />
+    </section>
   );
 }

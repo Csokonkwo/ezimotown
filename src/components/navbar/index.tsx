@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import MobileNav from '../mobile-menu';
 
-const Navbar = () => {
+export default function Navbar() {
   const scrollRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -42,7 +42,6 @@ const Navbar = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     whileHover={{ scale: 0.85 }}
                     whileTap={{ scale: 0.95 }}
-                    onHoverStart={() => console.log('hover started!')}
                     key={link.id}
                     role="listitem"
                     className="text-white mx-4 font-normal text-[20px] leading-[100%] tracking-[0%]"
@@ -68,7 +67,7 @@ const Navbar = () => {
                   alt="hamburger icon"
                   width={16}
                   height={13}
-                  className="object-contain mr-6 md:hidden cursor-pointer"
+                  className="object-contain w-auto h-auto mr-6 md:hidden cursor-pointer"
                 />
               </button>
               {/* hamburger */}
@@ -144,6 +143,4 @@ const Navbar = () => {
       <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );
-};
-
-export default Navbar;
+}

@@ -11,7 +11,7 @@ import { setCookie } from './utils';
 const getUser = async (): Promise<User | null> => {
   const token = Cookies.get('accessToken');
   if (!token) {
-    console.log('No token found, skipping user fetch');
+    // console.log('No token found, skipping user fetch');
     return null;
   }
 

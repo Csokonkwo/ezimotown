@@ -15,7 +15,7 @@ export default function Footer() {
       style={{ backgroundImage: `url(/assets/images/gold-background-2.png)` }}
     >
       {/* footer-container */}
-      <div className="flex flex-row items-center justify-between w-full h-full lg:px-[75px]">
+      <div className="flex flex-col gap-y-5 sm:flex-row sm:items-center sm:justify-between w-full h-full px-8 lg:px-[75px] overflow-hidden">
         {/* logo */}
         <Link
           href="/"
@@ -25,17 +25,16 @@ export default function Footer() {
             aria-hidden
             src="/assets/logo/ezimo_logo.png"
             alt="Logo icon"
-            // width={227}
-            // height={227}
-            fill
-            priority
+            width={227}
+            height={227}
             className="object-contain"
+            style={{ width: 'auto', height: 'auto' }}
           />
         </Link>
         {/* logo */}
         <div className="flex flex-col">
           {/* links */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:gap-10 aos-fade-up">
+          <div className="grid grid-cols-3 gap-5 sm:grid-cols-3 md:gap-10">
             {footerLinks.map((link) => (
               <motion.div
                 transition={{ ease: 'easeInOut', duration: 0.75 }}
@@ -51,10 +50,9 @@ export default function Footer() {
                       animate={{ opacity: 1, scale: 1 }}
                       whileHover={{ scale: 0.85 }}
                       whileTap={{ scale: 0.95 }}
-                      onHoverStart={() => console.log('hover started!')}
                       key={child.id}
                       role="listitem"
-                      className="font-poppins font-normal text-[18px] leading-[130%] -tracking-[0.03]"
+                      className="font-poppins font-normal text-[11px] sm:text-[18px] leading-[130%] -tracking-[0.03]"
                     >
                       <Link
                         href={child.url}
@@ -70,8 +68,8 @@ export default function Footer() {
           </div>
           {/* links */}
           {/* copyrights */}
-          <div className="mt-16 lg:mt-24">
-            <p className="text-white lg:text-end font-normal text-[18px] -tracking-[0.03em]">
+          <div className="mt-16 lg:mt-24 flex w-full justify-start md:justify-end">
+            <p className="text-white mx-auto sm:mx-0 font-normal text-[11px] md:text-[18px] -tracking-[0.03em]">
               &copy; {new Date().getFullYear()} Ezimo Town. All rights reserved.
             </p>
           </div>

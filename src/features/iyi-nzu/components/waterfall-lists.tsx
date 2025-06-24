@@ -46,7 +46,7 @@ export default function WaterfallLists() {
 
   return (
     <section
-      className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-[100vh] pb-[70px] px-0"
+      className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-auto md:min-h-screen pb-[70px] px-0"
       style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
     >
       {waterfall?.map((item) => (
@@ -57,7 +57,7 @@ export default function WaterfallLists() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ root: scrollRef }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="text-white font-bold font-poppins text-xl sm:text-4xl md:text-6xl lg:text-6xl mb-3 lg:mb-4"
+              className="text-white font-bold font-poppins text-xl sm:text-3xl md:text-4xl lg:text-6xl mb-3 lg:mb-4"
             >
               {item.title}
             </motion.h2>
@@ -83,20 +83,11 @@ export default function WaterfallLists() {
                 <ScrollZoomImage
                   key={img.id}
                   src={`${process.env.NEXT_PUBLIC_URL}/${img.path}`}
-                  alt="Iyi-nzu Image"
+                  alt={`${img.label} Images`}
                 />
               </div>
             )),
           )}
-          {/* {iyiNzuImages.map((item, index) => (
-            <div key={item.id} className="w-full h-full cursor-pointer m-0 p-0">
-              <ScrollZoomImage
-                key={item.id}
-                src={item.image}
-                alt="Iyi-nzu Image"
-              />
-            </div>
-          ))} */}
         </div>
       </motion.div>
     </section>

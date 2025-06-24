@@ -120,7 +120,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 alt={`Slide ${index}`}
                 width={310}
                 height={384}
-                className="rounded-2xl carousel__img embla__slide__number "
+                className="rounded-2xl carousel__img embla__slide__number object-cover"
               />
             </div>
           ))}

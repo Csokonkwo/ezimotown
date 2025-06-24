@@ -60,7 +60,6 @@ const PostsHero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     whileHover={{ scale: 0.85 }}
                     whileTap={{ scale: 0.95 }}
-                    onHoverStart={() => console.log('hover started!')}
                     key={link.id}
                     role="listitem"
                     className=" mx-4 font-normal text-[20px] leading-[100%] tracking-[0%]"
@@ -86,7 +85,7 @@ const PostsHero = () => {
                   alt="hamburger icon"
                   width={16}
                   height={13}
-                  className="object-contain mr-6 md:hidden cursor-pointer"
+                  className="object-contain w-auto h-auto mr-6 md:hidden cursor-pointer"
                 />
               </button>
               {/* hamburger */}

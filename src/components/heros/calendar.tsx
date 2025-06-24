@@ -14,7 +14,7 @@ const CalendarHero = () => {
   return (
     <>
       <header
-        className={`relative bg-cover bg-top  bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[65vh] md:h-[70vh]`}
+        className={`relative bg-cover bg-top  bg-no-repeat md:bg-center  w-full h-auto sm:h-[50vh] md:h-[65vh] lg:min-h-screen pb-10 md:pb-0`}
       >
         <Image
           src="/assets/images/blog-hero.jpg"
@@ -60,7 +60,6 @@ const CalendarHero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     whileHover={{ scale: 0.85 }}
                     whileTap={{ scale: 0.95 }}
-                    onHoverStart={() => console.log('hover started!')}
                     key={link.id}
                     role="listitem"
                     className=" mx-4 font-normal text-[20px] leading-[100%] tracking-[0%]"
@@ -87,6 +86,7 @@ const CalendarHero = () => {
                   width={16}
                   height={13}
                   className="object-contain mr-6 md:hidden cursor-pointer"
+                  style={{ width: 'auto', height: 'auto' }}
                 />
               </button>
               {/* hamburger */}
@@ -97,7 +97,7 @@ const CalendarHero = () => {
           {/* header-subcontainer */}
 
           {/* content */}
-          <div className="text-center mt-32 md:mt-24 px-8">
+          <div className="text-center pt-24 md:mt-24 px-8">
             <motion.h1
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}

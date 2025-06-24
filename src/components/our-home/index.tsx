@@ -7,7 +7,7 @@ export default function OurHome() {
   const scrollRef = useRef(null);
   return (
     <section
-      className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-[100vh]"
+      className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-auto lg:min-h-screen"
       style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
     >
       <motion.div

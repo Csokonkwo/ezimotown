@@ -9,9 +9,9 @@ export const footerLinks = [
         url: '/our-history',
       },
       {
-        id: 'our-blog',
+        id: 'blogs',
         title: 'Our Blog',
-        url: '/blog',
+        url: '/blogs',
       },
     ],
   },
