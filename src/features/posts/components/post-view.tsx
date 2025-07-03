@@ -46,10 +46,10 @@ export default function PostView() {
   }
   return (
     <section
-      className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-[100vh] pb-[70px] px-8"
+      className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-[100vh] pb-[70px]"
       style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <motion.div
           initial={{ y: 20 }}
           whileInView={{ y: 0 }}

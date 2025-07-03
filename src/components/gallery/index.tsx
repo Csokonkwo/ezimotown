@@ -16,13 +16,13 @@ export default function GallerySection() {
     >
       <div className="flex flex-col lg:flex-row h-full  lg:justify-between items-center">
         {/* <div className='flex-shrink-0'> */}
-        <motion.div className="">
+        <motion.div className="px-6 md:px-0">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ root: scrollRef }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-white text-center sm:text-start font-poppins font-semibold text-2xl sm:text-[50px] md:text-6xl mb-8"
+            className="text-white text-center sm:text-start font-poppins font-semibold text-2xl sm:text-[50px] md:text-6xl mb-3 md:mb-8"
           >
             Gallery
           </motion.h2>
@@ -31,7 +31,7 @@ export default function GallerySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ root: scrollRef }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-white font-helvetica text-[6px] max-w-[234px] sm:max-w-xs  sm:text-xl font-normal md:max-w-lg"
+            className="text-white font-helvetica text-[14px] max-w-[90%] sm:max-w-xs  sm:text-xl font-normal md:max-w-lg"
           >
             Take a moment to glance at the progress of Ezimo Town and witness
             how far we’ve come — from humble beginnings to a thriving community

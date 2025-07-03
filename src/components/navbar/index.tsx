@@ -12,11 +12,11 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`relative bg-cover bg-black-15 bg-top bg-blend-overlay bg-[url(/assets/images/waterfall.jpg)] bg-linear(180deg,rgba(0_0_0_0)_64.71%,rgba(0_0_0_0.5)_82.69%) bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[65vh] md:h-[100vh]`}
+        className={`relative bg-cover bg-black-15 bg-top bg-blend-overlay bg-[url(/assets/images/waterfall.jpg)] bg-linear(180deg,rgba(0_0_0_0)_64.71%,rgba(0_0_0_0.5)_82.69%) bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[65vh] md:h-[100vh] overflow-hidden`}
       >
-        <div className="relative z-[2]">
+        <div className="relative z-[2] overflow-hidden">
           <nav
-            className={`flex items-center bg-black md:bg-transparent justify-between lg:pl-[72px] lg:pr-[81px] py-10 h-[61px] md:pb-[105px] md:pt-[105px]  w-full`}
+            className={`flex items-center bg-black md:bg-transparent justify-between px-6 lg:pl-[72px] lg:pr-[81px] py-10 h-[61px] md:pb-[105px] md:pt-[105px]  w-full`}
           >
             {/* logo */}
             <Link
@@ -102,7 +102,7 @@ export default function Navbar() {
           {/* content */}
           {/* cultural */}
           <div
-            className="flex justify-between w-full mt-10 lg:mt-24 px-8 lg:px-[94px]"
+            className="flex justify-between w-full mt-10 lg:mt-24 px-6 md:px-8 lg:px-[94px]"
             ref={scrollRef}
             style={{ overflow: 'scroll' }}
           >

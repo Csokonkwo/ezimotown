@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Navbar />
       <div className="min-h-screen  font-helvetica">
-        <main className="flex flex-col">
+        <main className="flex flex-col overflow-hidden">
           <OurHome />
           <GallerySection />
           <BlogStories />
