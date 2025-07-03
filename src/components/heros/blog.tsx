@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import MobileNav from '../mobile-menu';
 import { usePathname } from 'next/navigation';
+import PageLoader from '../ui/spinner/page-loader';
 
 const BlogHero = () => {
   const scrollRef = useRef(null);
@@ -13,6 +14,7 @@ const BlogHero = () => {
   const pathname = usePathname();
   return (
     <>
+    <PageLoader/>
       <header
         className={`relative bg-cover bg-top  bg-no-repeat md:bg-center  w-full min-h-auto md:min-h-[65vh] lg:min-h-screen max-w-[1500px] overflow-hidden pb-5 lg:pb-0`}
         style={{

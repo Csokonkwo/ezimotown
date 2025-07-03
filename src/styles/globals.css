@@ -34,6 +34,7 @@ html {
   --font-poppins: Poppins, sans-serif;
   --font-montserrat: Montserrat, sans-serif;
   --font-helvetica: Helvetica, sans-serif;
+  --animate-spin:spin 1s linear infinite;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { navLinks } from '@/constants';
 import MobileNav from '../mobile-menu';
 import Head from 'next/head';
+import PageLoader from '../ui/spinner/page-loader';
 type HeroProps = {
   title: string;
   description: string;
@@ -29,6 +30,7 @@ export default function HeroSection({
   const backgroundUrl = `/assets/images/${bgImage}`;
   return (
     <>
+      <PageLoader/>
       {/* Preload the background image */}
       <Head>
         <link rel="preload" as="image" href={backgroundUrl} />
@@ -156,3 +158,150 @@ export default function HeroSection({
     </>
   );
 }
+
+
+// 'use client';
+
+// import { usePathname } from 'next/navigation';
+// import React, { useState } from 'react';
+// import { motion } from 'motion/react';
+// import Link from 'next/link';
+// import Image from 'next/image';
+// import { navLinks } from '@/constants';
+// import MobileNav from '../mobile-menu';
+// import PageLoader from '../ui/spinner/page-loader';
+
+// type HeroProps = {
+//   title: string;
+//   description: string;
+//   bgImage: string;
+//   subSections?: {
+//     title: string;
+//     para: string;
+//   }[];
+// };
+
+// export default function HeroSection({
+//   title,
+//   description,
+//   bgImage,
+//   subSections = [],
+// }: HeroProps) {
+//   const pathname = usePathname();
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [loaded, setLoaded] = useState(false);
+//   const backgroundUrl = `/assets/images/${bgImage}`;
+
+//   return (
+//     <>
+//     <PageLoader/>
+//     <header className="relative w-full min-h-auto sm:h-[65vh] md:h-screen overflow-hidden">
+//       {/* Background Image Layer */}
+//       <div className="absolute inset-0 -z-10 pointer-events-none">
+//         <Image
+//           src={backgroundUrl}
+//           alt="Hero background"
+//           fill
+//           priority
+//           onLoadingComplete={() => setLoaded(true)}
+//           className={`object-cover transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+//         />
+//         {/* Gradient Overlay */}
+//         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black/90" />
+//       </div>
+
+//       {/* LOADING fallback */}
+//       {!loaded && (
+//         <div className="absolute inset-0 z-20 flex items-center justify-center bg-black text-white text-sm">
+//           Loading hero...
+//         </div>
+//       )}
+
+//       {/* NAVBAR */}
+//       <nav className="flex justify-between items-center px-6 lg:px-20 py-6 z-30 relative">
+//         {/* Logo */}
+//         <Link href="/" className="relative w-14 h-14 md:w-24 md:h-24 z-30">
+//           <Image
+//             src="/assets/logo/ezimo_logo.png"
+//             alt="Logo"
+//             fill
+//             className="object-contain"
+//             priority
+//           />
+//         </Link>
+
+//         {/* Desktop Links */}
+//         <ul className="hidden md:flex space-x-6">
+//           {navLinks.map((link) => (
+//             <li key={link.id}>
+//               <Link
+//                 href={link.url}
+//                 className={`text-white font-medium hover:text-white/70 transition ${
+//                   pathname === link.url ? 'text-gold' : ''
+//                 }`}
+//               >
+//                 {link.title}
+//               </Link>
+//             </li>
+//           ))}
+//         </ul>
+
+//         {/* Hamburger */}
+//         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden z-30">
+//           <Image
+//             src="/assets/svgs/hamburger.svg"
+//             alt="Menu"
+//             width={16}
+//             height={13}
+//             className="object-contain"
+//           />
+//         </button>
+//       </nav>
+
+//       {/* CONTENT */}
+//       <div className="relative z-30 text-white text-center flex flex-col items-center justify-center px-4 pt-16 h-full">
+//         <motion.h1
+//           initial={{ y: 20, opacity: 0 }}
+//           animate={{ y: 0, opacity: 1 }}
+//           transition={{ duration: 0.8 }}
+//           className="text-4xl md:text-6xl lg:text-8xl font-bold mb-4"
+//         >
+//           {title}
+//         </motion.h1>
+
+//         <motion.p
+//           initial={{ y: 10, opacity: 0 }}
+//           animate={{ y: 0, opacity: 1 }}
+//           transition={{ delay: 0.2, duration: 0.8 }}
+//           className="max-w-3xl text-xs sm:text-base lg:text-lg font-normal text-white/90"
+//         >
+//           {description}
+//         </motion.p>
+//       </div>
+
+//       {/* SUBSECTIONS */}
+//       {subSections.length > 0 && (
+//         <div className="relative z-30 flex flex-wrap justify-center gap-6 px-6 lg:px-20 mt-10">
+//           {subSections.map((section, idx) => (
+//             <motion.div
+//               key={idx}
+//               initial={{ opacity: 0, y: 20 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               transition={{ delay: 0.3, duration: 0.8 }}
+//               className="max-w-sm"
+//             >
+//               <h3 className="text-white text-lg lg:text-2xl font-semibold mb-2">
+//                 {section.title}
+//               </h3>
+//               <p className="text-white text-sm lg:text-base opacity-80">{section.para}</p>
+//             </motion.div>
+//           ))}
+//         </div>
+//       )}
+
+//       {/* MOBILE NAV */}
+//       <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
+//     </header>
+//     </>
+//   );
+// }

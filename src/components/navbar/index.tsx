@@ -5,12 +5,14 @@ import { navLinks } from '@/constants';
 import Link from 'next/link';
 import Image from 'next/image';
 import MobileNav from '../mobile-menu';
+import PageLoader from '../ui/spinner/page-loader';
 
 export default function Navbar() {
   const scrollRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
+      <PageLoader/>
       <header
         className={`relative bg-cover bg-black-15 bg-top bg-blend-overlay bg-[url(/assets/images/waterfall.jpg)] bg-linear(180deg,rgba(0_0_0_0)_64.71%,rgba(0_0_0_0.5)_82.69%) bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[65vh] md:h-[100vh] overflow-hidden`}
       >

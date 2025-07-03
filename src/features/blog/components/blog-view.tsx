@@ -1,6 +1,5 @@
 'use client';
 import React, { useRef } from 'react';
-import { usePost } from '../api/get-post';
 import { useParams } from 'next/navigation';
 import { Spinner } from '@/components/ui/spinner';
 import Image from 'next/image';
@@ -8,8 +7,9 @@ import { renderContent } from '@/components/render-content/render-content';
 import BlogStories from '@/components/blog-stories';
 import { motion } from 'motion/react';
 import { formatDate } from '@/utils/format';
+import { usePost } from '@/features/posts/api/get-post';
 
-export default function PostView() {
+export default function BlogView() {
   const scrollRef = useRef(null);
   const params = useParams();
   const slug = params.slug as string;
@@ -67,7 +67,7 @@ export default function PostView() {
           whileInView={{ y: 0 }}
           viewport={{ root: scrollRef }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="font-normal max-w-4xl mx-auto  font-poppins text-lg sm:text-2xl md:text-3xl text-white"
+          className="font-normal max-w-4xl mx-auto  font-poppins text-xs sm:text-2xl md:text-3xl text-white"
         >
           {post.title}
         </motion.h4>

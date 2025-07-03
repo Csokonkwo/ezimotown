@@ -52,7 +52,7 @@ export const renderBlogContent = (htmlString: string) => {
           }
 
           return (
-            <p className="font-normal text-[10px] md:text-base lg:text-lg text-gray-60">
+            <p className="font-normal text-[14px] md:text-base lg:text-lg text-gray-60">
               {reactChildren}
             </p>
           );

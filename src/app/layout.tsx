@@ -3,6 +3,7 @@ import { Poppins, Montserrat } from 'next/font/google';
 import '@/styles/globals.css';
 import { AppProvider } from './provider';
 import { ErrorBoundary } from '@/components/error-boundary';
+import BackToTop from '@/components/ui/back-to-top';
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -32,7 +33,9 @@ export default function RootLayout({
         className={`${poppins.variable} ${montserrat.variable}  antialiased`}
       >
         <ErrorBoundary>
-          <AppProvider>{children}</AppProvider>
+          <AppProvider>{children}
+          <BackToTop/>
+          </AppProvider>
         </ErrorBoundary>
       </body>
     </html>

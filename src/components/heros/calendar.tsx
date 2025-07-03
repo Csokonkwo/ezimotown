@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import MobileNav from '../mobile-menu';
 import { usePathname } from 'next/navigation';
+import PageLoader from '../ui/spinner/page-loader';
 
 const CalendarHero = () => {
   const scrollRef = useRef(null);
@@ -13,6 +14,7 @@ const CalendarHero = () => {
   const pathname = usePathname();
   return (
     <>
+     <PageLoader/>
       <header
         className={`relative bg-cover bg-top  bg-no-repeat md:bg-center  w-full h-auto sm:h-[50vh] md:h-[65vh] lg:min-h-screen pb-10 md:pb-0`}
       >

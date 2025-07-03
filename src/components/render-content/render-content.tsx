@@ -53,7 +53,7 @@ export const renderContent = (htmlString: string) => {
           }
 
           return (
-            <p className="font-helvetica text-[#FFE9D5] font-normal text-[6px] sm:text-sm lg:text-lg text-start lg:max-w-[1389px] mb-4">
+            <p className="font-helvetica text-[#FFE9D5] font-normal text-[14px] sm:text-sm lg:text-lg text-start lg:max-w-[1389px] mb-4">
               {reactChildren}
             </p>
           );
