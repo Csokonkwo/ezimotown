@@ -4,8 +4,8 @@ import { motion } from 'motion/react';
 import ScrollZoomImage from '@/components/scroll/use-zoom-image';
 import { useMarathon } from '../api/get-marathon';
 import { Spinner } from '@/components/ui/spinner';
-import ScrollZoomText from '@/components/scroll/use-scroll-zoomtext';
-import { renderContent } from '@/components/render-content/render-content';
+// import ScrollZoomText from '@/components/scroll/use-scroll-zoomtext';
+// import { renderContent } from '@/components/render-content/render-content';
 
 export default function MarathonLists() {
   const scrollRef = useRef(null);
@@ -22,9 +22,14 @@ export default function MarathonLists() {
 
   if (marathonQuery.isError) {
     return (
-      <div className="text-white text-center py-12">
-        Failed to load marathon content
-      </div>
+      <section
+        className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-[100vh] pb-[70px] px-0"
+        style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
+      >
+        <p className="text-white text-center py-12">
+          Failed to load marathon content
+        </p>
+      </section>
     );
   }
 
@@ -45,7 +50,7 @@ export default function MarathonLists() {
       className="w-full relative bg-blend-overlay bg-black/90  bg-cover bg-top pt-12 md:pt-[67px] min-h-auto md:min-h-screen pb-[70px] px-0 overflow-hidden"
       style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
     >
-      {marathon?.map((item) => (
+      {/* {marathon?.map((item) => (
         <ScrollZoomText key={item.id}>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -58,7 +63,7 @@ export default function MarathonLists() {
           </motion.h2>
           <>{renderContent(item.content)}</>
         </ScrollZoomText>
-      ))}
+      ))} */}
       {/* --- ALL IMAGES AFTER TEXT CONTENT --- */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

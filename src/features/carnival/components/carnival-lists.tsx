@@ -3,9 +3,9 @@ import React, { useRef } from 'react';
 import { motion } from 'motion/react';
 import { useCarnival } from '../api/get-carnival';
 import ScrollZoomImage from '@/components/scroll/use-zoom-image';
-import { renderContent } from '@/components/render-content/render-content';
 import { Spinner } from '@/components/ui/spinner';
-import ScrollZoomText from '@/components/scroll/use-scroll-zoomtext';
+// import { renderContent } from '@/components/render-content/render-content';
+// import ScrollZoomText from '@/components/scroll/use-scroll-zoomtext';
 
 export default function CarnivalLists() {
   const scrollRef = useRef(null);
@@ -22,9 +22,14 @@ export default function CarnivalLists() {
 
   if (carnivalQuery.isError) {
     return (
-      <div className="text-white text-center py-12">
-        Failed to load carnival content
-      </div>
+      <section
+        className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-[100vh] pb-[70px] px-0"
+        style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
+      >
+        <p className="font-helvetica text-[#FFE9D5] font-normal text-[6px] sm:text-sm md:text-lg text-center lg:max-w-[1389px] mb-4">
+          Failed to load carnival content
+        </p>
+      </section>
     );
   }
   if (!carnival || carnival.length === 0) {
@@ -44,7 +49,7 @@ export default function CarnivalLists() {
       className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-[100vh] pb-[70px] px-0"
       style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
     >
-      {carnival?.map((item) => (
+      {/* {carnival?.map((item) => (
         <ScrollZoomText key={item.id}>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -57,7 +62,7 @@ export default function CarnivalLists() {
           </motion.h2>
           <>{renderContent(item.content)}</>
         </ScrollZoomText>
-      ))}
+      ))} */}
       {/* --- ALL IMAGES AFTER TEXT CONTENT --- */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

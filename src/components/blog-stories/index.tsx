@@ -12,12 +12,14 @@ import { Spinner } from '../ui/spinner';
 import LightBoxGallery from '../ui/lightbox';
 import MagnifyIcon from '../svgs/search-icon';
 import Pagination from '../ui/pagination';
+import EmptyState from '../errors/empty-state';
 
 const POSTS_PER_PAGE = 6;
 type BlogProps = {
   categorySlug?: string;
+  title?: string
 };
-export default function BlogStories({ categorySlug }: BlogProps) {
+export default function BlogStories({ categorySlug, title = 'Latest news from Our Blog Stories' }: BlogProps) {
   const scrollRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [lightImages, setLightImages] = useState<
@@ -65,15 +67,9 @@ export default function BlogStories({ categorySlug }: BlogProps) {
     );
   }
 
-  if (postQuery?.isError || !posts) {
-    return (
-      <section className="w-full relative bg-black pt-8 pb-6 sm:pt-16 md:pt-22.5 lg:pt-[67px] min-h-auto lg:min-h-[100vh] px-4 lg:px-20">
-        <p className="font-normal text-[12px] text-center underline sm:no-underline sm:text-base text-white mb-2">
-          {postQuery?.isError ? 'Error showing blogs' : 'No blogs to show'}
-        </p>
-      </section>
-    );
-  }
+  if (postQuery.isError) return <EmptyState message="Error showing blogs" />;
+  if (filteredPosts.length === 0)
+    return <EmptyState message="No blogs to show" />;
 
   const handleImageClick = (images: typeof lightImages, idx: number) => {
     setLightImages(images);
@@ -85,8 +81,9 @@ export default function BlogStories({ categorySlug }: BlogProps) {
     <section className="w-full relative  bg-black pt-8 pb-6 sm:pt-16 md:pt-22.5 lg:pt-[67px] min-h-auto md:min-h-screen  px-6  lg:px-20 overflow-hidden">
       <div className="flex justify-between items-center pb-8 md:pb-16">
         <div>
-          <motion.h6 className="text-gray-80 text-base sm:text-xl md:text-2xl font-normal">
-            Latest news from Our Blog Stories
+          <motion.h6 className="text-gray-80 text-[14px] sm:text-xl md:text-2xl font-normal">
+            {/* Latest news from Our Blog Stories */}
+            {title}
           </motion.h6>
         </div>
         <Link href={paths.posts.getHref()}>
@@ -134,10 +131,10 @@ export default function BlogStories({ categorySlug }: BlogProps) {
                 </div>
               </div>
 
-              <motion.p className="font-normal text-[12px] sm:text-base text-white mb-2 line-clamp-1">
+              <motion.p className="font-normal text-[14px] capitalize sm:text-base text-white mb-2 line-clamp-1">
                 {post?.title}
               </motion.p>
-              <motion.h6 className="text-[#98989A] mb-4">
+              <motion.h6 className="text-[#98989A] mb-4 text-[12px] sm:text-sm md:text-base xl:text-lg">
                 {post?.category?.name}
               </motion.h6>
               <Link href={paths.post.getHref(post?.slug)}>

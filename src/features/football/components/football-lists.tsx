@@ -1,11 +1,12 @@
 'use client';
-import React, { Fragment, useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'motion/react';
 import ScrollZoomImage from '@/components/scroll/use-zoom-image';
 import { useFootball } from '../api/get-football';
-import { renderContent } from '@/components/render-content/render-content';
 import { Spinner } from '@/components/ui/spinner';
-import ScrollZoomText from '@/components/scroll/use-scroll-zoomtext';
+// import { renderContent } from '@/components/render-content/render-content';
+// import ScrollZoomText from '@/components/scroll/use-scroll-zoomtext';
+
 export default function Footballlists() {
   const scrollRef = useRef(null);
   const footballQuery = useFootball();
@@ -21,9 +22,14 @@ export default function Footballlists() {
 
   if (footballQuery.isError) {
     return (
-      <div className="text-white text-center py-12">
-        Failed to load football content
-      </div>
+      <section
+        className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-[100vh] pb-[70px] px-0"
+        style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
+      >
+        <p className="text-white text-center py-12">
+          Failed to load football content
+        </p>
+      </section>
     );
   }
 
@@ -45,7 +51,7 @@ export default function Footballlists() {
       className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-auto md:min-h-screen pb-[70px] px-0"
       style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
     >
-      {football?.map((item) => (
+      {/* {football?.map((item) => (
         <Fragment key={item.id}>
           <ScrollZoomText>
             <motion.h2
@@ -60,7 +66,7 @@ export default function Footballlists() {
             <>{renderContent(item.content)}</>
           </ScrollZoomText>
         </Fragment>
-      ))}
+      ))} */}
       {/* --- ALL IMAGES AFTER TEXT CONTENT --- */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

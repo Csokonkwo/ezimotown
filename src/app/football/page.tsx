@@ -25,7 +25,7 @@ export default function FootballPage() {
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col">
           <Footballlists />
-          <BlogStories categorySlug="football" />
+          <BlogStories categorySlug="football" title="Latest news from Our Football"/>
         </main>
       </div>
       <Footer />

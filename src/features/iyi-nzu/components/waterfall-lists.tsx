@@ -1,11 +1,11 @@
 'use client';
-import React, { Fragment, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useWaterfall } from '../api/get-waterfall';
 import { motion } from 'motion/react';
 import ScrollZoomImage from '@/components/scroll/use-zoom-image';
-import { renderContent } from '@/components/render-content/render-content';
 import { Spinner } from '@/components/ui/spinner';
-import ScrollZoomText from '@/components/scroll/use-scroll-zoomtext';
+// import { renderContent } from '@/components/render-content/render-content';
+// import ScrollZoomText from '@/components/scroll/use-scroll-zoomtext';
 
 export default function WaterfallLists() {
   const scrollRef = useRef(null);
@@ -49,7 +49,7 @@ export default function WaterfallLists() {
       className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-auto md:min-h-screen pb-[70px] px-0"
       style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
     >
-      {waterfall?.map((item) => (
+      {/* {waterfall?.map((item) => (
         <Fragment key={item.id}>
           <ScrollZoomText>
             <motion.h2
@@ -64,7 +64,7 @@ export default function WaterfallLists() {
             <>{renderContent(item.content)}</>
           </ScrollZoomText>
         </Fragment>
-      ))}
+      ))} */}
       {/* --- ALL IMAGES AFTER TEXT CONTENT --- */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ArrowUp } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,34 +51,40 @@ export default function BackToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-black-8 shadow-lg flex items-center justify-center cursor-pointer transition-opacity duration-300 ${
+      className={`fixed bottom-6 right-6 z-50 size-9 rounded-full bg-black-8 shadow-lg flex items-center justify-center cursor-pointer transition-opacity duration-300 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
       aria-label="Scroll to top"
     >
-      <svg viewBox="0 0 36 36" className="w-6 h-6 rotate-[-90deg]">
-        <circle
-          className="text-gray-300"
-          stroke="currentColor"
-          strokeWidth="3"
-          fill="none"
-          cx="18"
-          cy="18"
-          r="15.9155"
-        />
-        <circle
-          ref={circleRef}
-          className="text-gold"
-          stroke="currentColor"
-          strokeWidth="3"
-          fill="none"
-          cx="18"
-          cy="18"
-          r="15.9155"
-          strokeDasharray="100"
-          strokeDashoffset="100"
-        />
+      {/* Background scroll progress circle */}
+      <svg viewBox="0 0 36 36" className="absolute w-full h-full">
+        <g transform="rotate(-90 18 18)">
+          <circle
+            className="text-gray-300"
+            stroke="currentColor"
+            strokeWidth="3"
+            fill="none"
+            cx="18"
+            cy="18"
+            r="15.9155"
+          />
+          <circle
+            ref={circleRef}
+            className="text-gold"
+            stroke="currentColor"
+            strokeWidth="3"
+            fill="none"
+            cx="18"
+            cy="18"
+            r="15.9155"
+            strokeDasharray="100"
+            strokeDashoffset="100"
+          />
+        </g>
       </svg>
+
+      {/* Centered arrow icon */}
+      <ArrowUp className="size-5 text-white z-10" />
     </button>
   );
 }

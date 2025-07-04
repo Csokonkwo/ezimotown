@@ -21,7 +21,7 @@ export default function MarathonPage() {
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col">
           <MarathonLists />
-          <BlogStories categorySlug="marathon" />
+          <BlogStories categorySlug="marathon" title='Latest news from Our Marathon'/>
         </main>
       </div>
       <Footer />

@@ -23,7 +23,7 @@ export default function IyinzuPage() {
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col">
           <WaterfallLists />
-          <BlogStories categorySlug="waterfall" />
+          <BlogStories categorySlug="waterfall" title='Latest news from Our Culture'/>
         </main>
       </div>
       <Footer />

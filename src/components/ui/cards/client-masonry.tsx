@@ -54,12 +54,12 @@ export default function ClientMasonry() {
               </div>
 
               {/* overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80 z-10 px-4 sm:px-8.5 pt-7 md:pt-12.5 flex flex-col justify-start scroll-container">
+              <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80 z-10 px-4 sm:px-8.5 pt-3 sm:pt-7 md:pt-12.5 flex flex-col justify-start scroll-container">
                 <motion.h3
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4 }}
-                  className="text-white font-bold text-xl sm:text-2xl md:text-3xl mb-2"
+                  className="text-white font-bold text-lg sm:text-2xl md:text-3xl mb-2"
                 >
                   {item.title}
                 </motion.h3>

@@ -90,11 +90,11 @@ export const navLinks = [
     title: 'Marathon',
     url: '/marathon',
   },
-  {
-    id: 'calendar',
-    title: 'Calendar',
-    url: '/calendar',
-  },
+  // {
+  //   id: 'calendar',
+  //   title: 'Calendar',
+  //   url: '/calendar',
+  // },
   {
     id: 'blogs',
     title: 'Blog',
