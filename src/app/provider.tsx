@@ -8,8 +8,8 @@ import { queryConfig } from '@/lib/react-query';
 import MainErrorFallback from '@/components/errors/main';
 import { AuthLoader } from '@/lib/auth';
 import { Spinner } from '@/components/ui/spinner';
-import { RouteLoader } from '@/components/ui/route-loader/route-loader';
-import { QueryLoader } from '@/components/ui/route-loader/query-loader';
+// import { RouteLoader } from '@/components/ui/route-loader/route-loader';
+// import { QueryLoader } from '@/components/ui/route-loader/query-loader';
 
 type AppProviderProps = {
   children: React.ReactNode;
@@ -35,8 +35,6 @@ export const AppProvider = ({ children }: AppProviderProps) => {
             </div>
           )}
         >
-          <RouteLoader />
-          <QueryLoader />
           {children}
         </AuthLoader>
       </QueryClientProvider>

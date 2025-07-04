@@ -14,7 +14,7 @@ const CalendarHero = () => {
   const pathname = usePathname();
   return (
     <>
-     <PageLoader/>
+      <PageLoader />
       <header
         className={`relative bg-cover bg-top  bg-no-repeat md:bg-center  w-full h-auto sm:h-[50vh] md:h-[65vh] lg:min-h-screen pb-10 md:pb-0`}
       >

@@ -20,9 +20,8 @@ export default function MarathonPage() {
       <MarathonHero />
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col">
-          {/* <EzimoMarathon /> */}
           <MarathonLists />
-          <BlogStories />
+          <BlogStories categorySlug="marathon" />
         </main>
       </div>
       <Footer />

@@ -14,7 +14,7 @@ const BlogHero = () => {
   const pathname = usePathname();
   return (
     <>
-    <PageLoader/>
+      <PageLoader />
       <header
         className={`relative bg-cover bg-top  bg-no-repeat md:bg-center  w-full min-h-auto md:min-h-[65vh] lg:min-h-screen max-w-[1500px] overflow-hidden pb-5 lg:pb-0`}
         style={{

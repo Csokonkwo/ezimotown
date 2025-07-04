@@ -2,7 +2,6 @@
 import CircularSpinner from '@/components/ui/spinner/circular-spinner';
 import { useState, useEffect } from 'react';
 
-
 export default function PageLoader() {
   const [isLoading, setIsLoading] = useState(true);
 

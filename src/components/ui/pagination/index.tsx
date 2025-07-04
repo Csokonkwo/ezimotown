@@ -41,22 +41,26 @@ export default function Pagination({
     return pages;
   };
   return (
-    <div className={`flex justify-center gap-2 mt-8 ${className}`}>
-      <Button
-        onClick={() => handlePageChange(currentPage - 1)}
-        disabled={currentPage === 1}
-        className="px-3"
-      >
-        Previous
-      </Button>
-      {renderPageNumbers()}
-      <Button
-        onClick={() => handlePageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
-        className="px-3"
-      >
-        Next
-      </Button>
-    </div>
+    <>
+      {totalPages > 1 && (
+        <div className={`flex justify-center gap-2 mt-8 ${className}`}>
+          <Button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="px-3"
+          >
+            Previous
+          </Button>
+          {renderPageNumbers()}
+          <Button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="px-3"
+          >
+            Next
+          </Button>
+        </div>
+      )}
+    </>
   );
 }
