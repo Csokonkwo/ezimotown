@@ -114,10 +114,10 @@ export default function Navbar() {
               viewport={{ root: scrollRef }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
+              <h3 className="font-helvetica text-white text-[10px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
                 Cultural and Historical Insights
               </h3>
-              <p className="font-helvetica text-center text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs md:text-sm">
+              <p className="font-helvetica sm:text-center text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[7.99px] sm:text-xs md:text-sm">
                 The Installation of ancestral symbols is part of the historical
                 developments of the people, reflecting their commitment to
                 preserving cultural heritage.
@@ -129,10 +129,10 @@ export default function Navbar() {
               viewport={{ root: scrollRef }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
+              <h3 className="font-helvetica text-white text-[10px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
                 Community and Lifestyle
               </h3>
-              <p className="font-helvetica text-center text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs md:text-sm">
+              <p className="font-helvetica sm:text-center text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[7.99px] sm:text-xs md:text-sm">
                 Ezimo is characterized by its peaceful atmosphere and communal
                 lifestyle. The community is known for its hospitality and strong
                 sense of identity.{' '}
