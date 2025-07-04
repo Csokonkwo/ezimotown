@@ -3,7 +3,7 @@ import { api } from '@/lib/api-client';
 import { FootballPosts } from '@/types/api';
 import { QueryConfig } from '@/lib/react-query';
 
-export const getFootball = (): Promise<{ data: FootballPosts[] }> => {
+export const getFootball = (): Promise<{ data: FootballPosts }> => {
   return api.get('/football-posts');
 };
 

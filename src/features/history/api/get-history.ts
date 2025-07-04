@@ -1,10 +1,10 @@
 import { queryOptions, useQuery } from '@tanstack/react-query';
 import { api } from '@/lib/api-client';
-import { FootballPosts } from '@/types/api';
+import { FootballPosts, HistoryPosts } from '@/types/api';
 import { QueryConfig } from '@/lib/react-query';
 
-export const getHistory = (): Promise<{ data: FootballPosts[] }> => {
-  return api.get('/fetch-culture-gallery');
+export const getHistory = (): Promise<{ data: HistoryPosts }> => {
+  return api.get('/culture-posts');
 };
 
 export const getHistoryQueryOptions = () => {

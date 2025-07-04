@@ -33,7 +33,11 @@ export default function MarathonLists() {
     );
   }
 
-  if (!marathon || marathon.length === 0) {
+  if (
+    !marathon ||
+    marathon?.posts.length === 0 ||
+    marathon?.galleries?.length === 0
+  ) {
     return (
       <section
         className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] md:min-h-screen pb-[70px] px-0 overflow-hidden"
@@ -73,15 +77,13 @@ export default function MarathonLists() {
         className="mt-12 lg:mt-[93px]"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 md:gap-0 w-full m-0 p-0">
-          {marathon.flatMap((item) =>
-            item.images.map((img) => (
-              <ScrollZoomImage
-                key={img.id}
-                src={`${process.env.NEXT_PUBLIC_URL}/${img.path}`}
-                alt={`${img.label} Images`}
-              />
-            )),
-          )}
+          {marathon?.galleries?.map((img) => (
+            <ScrollZoomImage
+              key={img.id}
+              src={`${process.env.NEXT_PUBLIC_URL}/${img.path}`}
+              alt={`${img.label} Images`}
+            />
+          ))}
         </div>
       </motion.div>
     </section>

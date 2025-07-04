@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 import React from 'react';
 export async function generateMetadata(): Promise<Metadata> {
   const marathon = await getMarathon();
-  const firstItem = marathon?.data[0];
+  const firstItem = marathon?.data?.posts[0];
   return {
     title: firstItem?.meta_title || 'Marathon Page',
     description: firstItem?.meta_description || '',
@@ -21,7 +21,10 @@ export default function MarathonPage() {
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col">
           <MarathonLists />
-          <BlogStories categorySlug="marathon" title='Latest news from Our Marathon'/>
+          <BlogStories
+            categorySlug="marathon"
+            title="Latest news from Our Marathon"
+          />
         </main>
       </div>
       <Footer />

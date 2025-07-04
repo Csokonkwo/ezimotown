@@ -3,7 +3,7 @@ import { QueryConfig } from '@/lib/react-query';
 import { WaterFallPosts } from '@/types/api';
 import { queryOptions, useQuery } from '@tanstack/react-query';
 
-export const getWaterfall = (): Promise<{ data: WaterFallPosts[] }> => {
+export const getWaterfall = (): Promise<{ data: WaterFallPosts }> => {
   return api.get('/waterfall-posts');
 };
 

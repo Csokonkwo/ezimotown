@@ -3,7 +3,7 @@ import { QueryConfig } from '@/lib/react-query';
 import { BlogPosts } from '@/types/api';
 import { queryOptions, useQuery } from '@tanstack/react-query';
 
-export const getBlogPosts = (): Promise<{ data: BlogPosts[] }> => {
+export const getBlogPosts = (): Promise<{ data: BlogPosts }> => {
   return api.get('/blog-posts');
 };
 

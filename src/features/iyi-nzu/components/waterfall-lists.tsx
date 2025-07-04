@@ -33,7 +33,11 @@ export default function WaterfallLists() {
     );
   }
 
-  if (!waterfall || waterfall.length === 0) {
+  if (
+    !waterfall ||
+    waterfall?.posts.length === 0 ||
+    waterfall?.galleries.length === 0
+  ) {
     <section
       className="w-full relative bg-blend-overlay bg-black/90 bg-cover bg-top pt-12 md:pt-[67px] min-h-[100vh] pb-[70px] px-0"
       style={{ backgroundImage: `url(/assets/images/gold-background.png)` }}
@@ -74,20 +78,13 @@ export default function WaterfallLists() {
         className="mt-12 lg:mt-[93px]"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 md:gap-0 w-full m-0 p-0">
-          {waterfall?.flatMap((item) =>
-            item.images?.map((img) => (
-              <div
-                key={img.id}
-                className="w-full h-full cursor-pointer m-0 p-0"
-              >
-                <ScrollZoomImage
-                  key={img.id}
-                  src={`${process.env.NEXT_PUBLIC_URL}/${img.path}`}
-                  alt={`${img.label} Images`}
-                />
-              </div>
-            )),
-          )}
+          {waterfall?.galleries?.map((img) => (
+            <ScrollZoomImage
+              key={img.id}
+              src={`${process.env.NEXT_PUBLIC_URL}/${img.path}`}
+              alt={`${img.label} Images`}
+            />
+          ))}
         </div>
       </motion.div>
     </section>

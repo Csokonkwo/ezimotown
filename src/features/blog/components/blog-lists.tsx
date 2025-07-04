@@ -5,6 +5,7 @@ import BlogContentSection from '@/components/blog/blog-section';
 import { useGetBlogPosts } from '../api/get-blogs';
 import { Spinner } from '@/components/ui/spinner';
 import Image from 'next/image';
+import { BlogPosts } from '@/types/api';
 
 export default function BlogLists() {
   const scrollRef = useRef(null);
@@ -41,7 +42,7 @@ export default function BlogLists() {
     );
   }
 
-  if (!blogs || blogs.length === 0) {
+  if (!blogs || blogs?.posts?.length === 0) {
     return (
       <section
         className="w-full relative bg-blend-overlay bg-black/95 bg-cover bg-top pt-12 md:pt-[140px] min-h-[100vh] pb-[70px] px-0"
@@ -54,7 +55,7 @@ export default function BlogLists() {
     );
   }
 
-  const latestBlog = blogs[blogs.length - 1];
+  const latestBlog = blogs?.posts[blogs?.posts?.length - 1];
   const imageUrl = `${process.env.NEXT_PUBLIC_URL}/${latestBlog?.images[0]?.path}`;
 
   return (

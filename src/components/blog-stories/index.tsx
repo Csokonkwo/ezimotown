@@ -17,9 +17,12 @@ import EmptyState from '../errors/empty-state';
 const POSTS_PER_PAGE = 6;
 type BlogProps = {
   categorySlug?: string;
-  title?: string
+  title?: string;
 };
-export default function BlogStories({ categorySlug, title = 'Latest news from Our Blog Stories' }: BlogProps) {
+export default function BlogStories({
+  categorySlug,
+  title = 'Latest news from Our Blog Stories',
+}: BlogProps) {
   const scrollRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [lightImages, setLightImages] = useState<

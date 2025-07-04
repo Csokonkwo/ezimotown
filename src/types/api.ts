@@ -131,7 +131,6 @@ export type Images = {
   // path: "uploads/68b77b42bc8333f978f57bc2066ad75c1749021673.jpg",
   path: string;
   label: string;
-  // file_type: "jpg",
   file_type: string;
   deleted_at: null;
   created_at: string;
@@ -166,7 +165,6 @@ export type Posts = {
   content: string;
   is_featured: boolean;
   status: string;
-  // published_at: "2025-06-04T07:29:48.000000Z",
   published_at: string;
   scheduled_publish_at: null;
   meta_title: string;
@@ -216,58 +214,15 @@ export type CategoryBySlug = {
 };
 
 export type BlogPosts = {
-  id: string;
-  category_id: string;
-  created_by: CreatedBy;
-  updated_by: UpdatedBy;
-  published_by: PublishedBy;
-  title: string;
-  slug: string;
-  excerpt: string;
-  content: string;
-  is_featured: boolean;
-  status: string;
-  published_at: string;
-  scheduled_publish_at: null;
-  meta_title: string;
-  meta_description: string;
-  meta_keywords: string;
-  deleted_at: null;
-  created_at: string;
-  updated_at: string;
-  images: Images[];
-  category: Category;
-  post_tags: PostTags[];
-  comments: [];
+  posts: PostsArr[];
 };
 
 export type WaterFallPosts = {
-  id: string;
-  category_id: string;
-  created_by: CreatedBy;
-  updated_by: string | null;
-  published_by: string | null;
-  title: string;
-  slug: string;
-  excerpt: string;
-  content: string;
-  is_featured: boolean;
-  status: string;
-  published_at: string | null;
-  scheduled_publish_at: string | null;
-  meta_title: string;
-  meta_description: string;
-  meta_keywords: string;
-  deleted_at: null;
-  created_at: string;
-  updated_at: string;
-  images: Images[];
-  category: Category;
-  post_tags: PostTags[];
-  comments: [];
+  posts: PostsArr[];
+  galleries: Gallery[];
 };
 
-export type FootballPosts = {
+export type PostsArr = {
   id: string;
   category_id: string;
   created_by: CreatedBy;
@@ -279,70 +234,50 @@ export type FootballPosts = {
   content: string;
   is_featured: boolean;
   status: string;
+  is_sticky: boolean;
   published_at: string;
-  scheduled_publish_at: null;
+  scheduled_publish_at: string | null;
   meta_title: string;
   meta_description: string;
   meta_keywords: string;
-  deleted_at: null;
+  deleted_at: string | null;
   created_at: string;
   updated_at: string;
   images: Images[];
   category: Category;
   post_tags: PostTags[];
   comments: [];
+};
+
+export type Gallery = {
+  id: string;
+  uploader_id: string;
+  attachable_id: string;
+  attachable_type: string;
+  path: string;
+  label: string;
+  file_type: string;
+  deleted_at: null;
+  created_at: string;
+  updated_at: string;
+};
+export type HistoryPosts = {
+  posts: PostsArr[];
+  galleries: Gallery[];
+};
+export type FootballPosts = {
+  posts: PostsArr[];
+  galleries: Gallery[];
 };
 
 export type MarathonPosts = {
-  id: string;
-  category_id: string;
-  created_by: CreatedBy;
-  updated_by: UpdatedBy;
-  published_by: PublishedBy;
-  title: string;
-  slug: string;
-  excerpt: string;
-  content: string;
-  is_featured: boolean;
-  status: string;
-  published_at: string;
-  scheduled_publish_at: null;
-  meta_title: string;
-  meta_description: string;
-  meta_keywords: string;
-  deleted_at: null;
-  created_at: string;
-  updated_at: string;
-  images: Images[];
-  category: Category;
-  post_tags: PostTags[];
-  comments: [];
+  posts: PostsArr[];
+  galleries: Gallery[];
 };
 
 export type CarnivalPosts = {
-  id: string;
-  category_id: string;
-  created_by: CreatedBy;
-  updated_by: UpdatedBy;
-  published_by: PublishedBy;
-  title: string;
-  slug: string;
-  excerpt: string;
-  content: string;
-  is_featured: boolean;
-  status: string;
-  published_at: string;
-  scheduled_publish_at: string | null;
-  meta_title: string;
-  meta_description: string;
-  meta_keywords: string;
-  deleted_at: null;
-  created_at: string;
-  updated_at: string;
-  images: Images[];
-  category: Category;
-  post_tags: PostTags[];
-  comments: [];
+  posts: PostsArr[];
+  galleries: Gallery[];
 };
 
 export type Post = {

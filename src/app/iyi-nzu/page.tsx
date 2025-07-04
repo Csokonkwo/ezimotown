@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 import React from 'react';
 export async function generateMetadata(): Promise<Metadata> {
   const waterfall = await getWaterfall();
-  const firstItem = waterfall?.data?.[0];
+  const firstItem = waterfall?.data?.posts[0];
   return {
     title: firstItem?.meta_title || 'Iyi Nzu',
     description:
@@ -23,7 +23,10 @@ export default function IyinzuPage() {
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col">
           <WaterfallLists />
-          <BlogStories categorySlug="waterfall" title='Latest news from Our Culture'/>
+          <BlogStories
+            categorySlug="waterfall"
+            title="Latest news from Our Culture"
+          />
         </main>
       </div>
       <Footer />

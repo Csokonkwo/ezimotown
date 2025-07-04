@@ -3,7 +3,7 @@ import { QueryConfig } from '@/lib/react-query';
 import { MarathonPosts } from '@/types/api';
 import { queryOptions, useQuery } from '@tanstack/react-query';
 
-export const getMarathon = (): Promise<{ data: MarathonPosts[] }> => {
+export const getMarathon = (): Promise<{ data: MarathonPosts }> => {
   return api.get('/marathon-posts');
 };
 

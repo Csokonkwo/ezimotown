@@ -3,7 +3,7 @@ import { QueryConfig } from '@/lib/react-query';
 import { CarnivalPosts } from '@/types/api';
 import { queryOptions, useQuery } from '@tanstack/react-query';
 
-export const getCarnival = (): Promise<{ data: CarnivalPosts[] }> => {
+export const getCarnival = (): Promise<{ data: CarnivalPosts }> => {
   return api.get('/carnival-posts');
 };
 

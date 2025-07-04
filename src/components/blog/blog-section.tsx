@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import ScrollZoomText from '../scroll/use-scroll-zoomtext';
 import { Button } from '../ui/buttons';
 import { motion } from 'motion/react';
@@ -9,16 +9,22 @@ import { calculateReadingTime, formatDate } from '@/utils/format';
 import Link from 'next/link';
 import { paths } from '@/config/paths';
 type BlogProps = {
-  blogs: BlogPosts[];
+  blogs: BlogPosts;
 };
 export default function BlogContentSection({ blogs }: BlogProps) {
-  const latestBlog = blogs[blogs.length - 1];
+  const latestBlog = useMemo(() => {
+    return [...blogs.posts].sort(
+      (a, b) =>
+        new Date(b.published_at).getTime() - new Date(a.published_at).getTime(),
+    )[0];
+  }, [blogs.posts]);
+
   return (
     <ScrollZoomText className="will-change-transform text-start flex flex-col lg:flex-row gap-16 mt-8 shadow-inner shadow-white/5 py-8">
       <div className="relative max-h-[320px] overflow-hidden md:px-10 px-6  pb-16">
         {/* Excerpted blog content */}
         <div className="space-y-4 text-white">
-          {latestBlog.content
+          {latestBlog?.content
             .split('\n')
             // .slice(0, 6)
             .map((para, idx) => (
@@ -32,7 +38,7 @@ export default function BlogContentSection({ blogs }: BlogProps) {
         <div className="absolute bottom-0 left-0 w-full h-28 bg-gradient-to-t from-[#141414] to-transparent pointer-events-none z-10" />
 
         {/* Read Full Blog Button */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20">
           <Link href={paths.blog.getHref(latestBlog.slug)}>
             <Button
               icon={<ArrowDownIcon />}

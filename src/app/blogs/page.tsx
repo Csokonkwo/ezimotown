@@ -9,7 +9,7 @@ import React from 'react';
 
 export async function generateMetadata(): Promise<Metadata> {
   const blogs = await getBlogPosts();
-  const firstItem = blogs?.data?.[0];
+  const firstItem = blogs?.data?.posts[0];
   return {
     title: firstItem?.meta_title || 'Blog Page',
     description: firstItem?.meta_description || '',

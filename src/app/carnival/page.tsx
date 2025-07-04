@@ -8,7 +8,7 @@ import React from 'react';
 
 export async function generateMetadata(): Promise<Metadata> {
   const carnival = await getCarnival();
-  const firstItem = carnival?.data?.[0];
+  const firstItem = carnival?.data?.posts[0];
   return {
     title: firstItem?.meta_title || 'Carnival Page',
     description:
@@ -23,7 +23,10 @@ export default function CarnivalPage() {
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col">
           <CarnivalLists />
-          <BlogStories categorySlug="carnival" title='Latest news from Our Carnival'/>
+          <BlogStories
+            categorySlug="carnival"
+            title="Latest news from Our Carnival"
+          />
         </main>
       </div>
       <Footer />

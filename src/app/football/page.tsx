@@ -8,7 +8,7 @@ import React from 'react';
 
 export async function generateMetadata(): Promise<Metadata> {
   const football = await getFootball();
-  const firstItem = football?.data?.[0];
+  const firstItem = football?.data?.posts[0];
   return {
     title: firstItem?.meta_title || 'Football Page',
     description:
@@ -25,7 +25,10 @@ export default function FootballPage() {
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col">
           <Footballlists />
-          <BlogStories categorySlug="football" title="Latest news from Our Football"/>
+          <BlogStories
+            categorySlug="football"
+            title="Latest news from Our Football"
+          />
         </main>
       </div>
       <Footer />
