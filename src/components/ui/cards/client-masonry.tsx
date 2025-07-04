@@ -54,7 +54,7 @@ export default function ClientMasonry() {
               </div>
 
               {/* overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80 z-10 px-4 sm:px-8.5 pt-7 md:pt-12.5 flex flex-col justify-start overflow-y-auto">
+              <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80 z-10 px-4 sm:px-8.5 pt-7 md:pt-12.5 flex flex-col justify-start scroll-container">
                 <motion.h3
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
