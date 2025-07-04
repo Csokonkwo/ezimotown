@@ -43,13 +43,14 @@ export default function ClientMasonry() {
               className={`relative overflow-hidden rounded-4xl md:rounded-[50px] group cursor-pointer ${index === gridItems.length - 2 ? 'grayscale' : ''}`}
             >
               {/* image container */}
-              <div className="relative w-full h-auto">
+              <div className="relative w-full">
                 <Image
                   src={item.image}
                   alt={item.title}
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105 w-full h-full max-h-[400px] min-h-[280px]"
                   height={382}
                   width={476}
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </div>
 
