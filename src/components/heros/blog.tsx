@@ -129,10 +129,10 @@ const BlogHero = () => {
               viewport={{ root: scrollRef }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-xl lg:text-3xl font-normal mb-2 lg:mb-3">
+              <h3 className="font-helvetica text-white text-[10px] sm:text-sm md:text-xl lg:text-3xl font-normal mb-2 lg:mb-3">
                 Ezimo Voices: Stories That Shape Us
               </h3>
-              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs lg:text-sm">
+              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[7.99px] sm:text-xs lg:text-sm">
                 Dive into the heartbeat of Ezimo through stories, opinions, and
                 reflections from our people. From historic tales to modern-day
                 triumphs,
@@ -145,10 +145,10 @@ const BlogHero = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               data-aos="fade-left"
             >
-              <h3 className="font-helvetica text-white text-[7.99px] sm:text-sm md:text-xl lg:text-3xl font-normal mb-2 lg:mb-3">
+              <h3 className="font-helvetica text-white text-[10px] sm:text-sm md:text-xl lg:text-3xl font-normal mb-2 lg:mb-3">
                 News, Culture & Community
               </h3>
-              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[4.5px] sm:text-xs lg:text-sm">
+              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[7.99px] sm:text-xs lg:text-sm">
                 Stay informed and inspired with the latest updates, event
                 highlights, cultural insights, and community spotlights. Whether
                 you’re near or far, our blog keeps you connected to the life and
