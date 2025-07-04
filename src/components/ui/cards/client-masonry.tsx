@@ -43,19 +43,18 @@ export default function ClientMasonry() {
               className={`relative overflow-hidden rounded-4xl md:rounded-[50px] group cursor-pointer ${index === gridItems.length - 2 ? 'grayscale' : ''}`}
             >
               {/* image container */}
-              <div className="relative w-full">
+              <div className="relative w-full h-auto">
                 <Image
                   src={item.image}
                   alt={item.title}
-                  className="object-cover transition-transform duration-500 group-hover:scale-105 w-full h-full max-h-[400px] min-h-[280px]"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                   height={382}
                   width={476}
-                  style={{ width: '100%', height: 'auto' }}
                 />
               </div>
 
               {/* overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80 z-10 px-4 sm:px-8.5 pt-7 md:pt-12.5 flex flex-col justify-start">
+              <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80 z-10 px-4 sm:px-8.5 pt-7 md:pt-12.5 flex flex-col justify-start overflow-y-auto">
                 <motion.h3
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
