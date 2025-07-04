@@ -107,40 +107,40 @@ export const gridItems = [
     id: 1,
     title: 'Iyi-Nzu Waterfall',
     content: `A stunning natural wonder in Ezimo,captivating visitors with its towering cascade and tranquil beauty.`,
-    image: '/assets/images/waterfall-description.jpeg',
+    image: '/assets/images/waterfall-grid.jpeg',
   },
   {
     id: 2,
     title: 'Football',
     content: `Passionate and competitive, Ezimo’s football tournaments showcase local talent and ignite community spirit year-round.`,
-    image: '/assets/images/football.png',
+    image: '/assets/images/football-grid.png',
   },
   {
     id: 3,
     title: 'Carnival',
     content: `A vibrant celebration of our culture, music, and dance that brings the entire community together in colorful unity.`,
-    image: '/assets/images/carnival.png',
+    image: '/assets/images/carnival-grid.png',
   },
   {
     id: 4,
     title: 'Blog',
     content:
       'Stories, updates, and insights capturing the heartbeat of Ezimo — from local voices to cultural highlights.',
-    image: '/assets/images/blog.jpeg',
+    image: '/assets/images/blog-grid.jpeg',
   },
   {
     id: 5,
     title: 'History',
     content:
       'Rooted in tradition and resilience, Ezimo’s rich history tells the story of a proud people shaped by culture and community.',
-    image: '/assets/images/our-history.jpeg',
+    image: '/assets/images/history-grid.jpeg',
   },
   {
     id: 6,
     title: 'Marathon',
     content:
       'An annual endurance race that unites athletes and spectators in a spirited celebration of health, strength, and community pride.',
-    image: '/assets/images/marathon.jpeg',
+    image: '/assets/images/marathon-grid.jpeg',
   },
 ];
 
