@@ -23,7 +23,7 @@ export default function CarnivalPage() {
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col">
           <CarnivalLists />
-          <BlogStories />
+          <BlogStories categorySlug="carnival" />
         </main>
       </div>
       <Footer />

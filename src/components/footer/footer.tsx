@@ -70,7 +70,15 @@ export default function Footer() {
           {/* copyrights */}
           <div className="mt-16 lg:mt-24 flex w-full justify-start md:justify-end">
             <p className="text-white mx-auto sm:mx-0 font-normal text-[11px] md:text-[18px] -tracking-[0.03em]">
-              &copy; {new Date().getFullYear()} Ezimo Town. All rights reserved | <Link className='hover:text-gold text-sm transition-colors ease-out' href="https://zeltechnologies.com/" target='_blank'>Developed by Zeltechnologies</Link>
+              &copy; {new Date().getFullYear()} Ezimo Town. All rights reserved
+              |{' '}
+              <Link
+                className="hover:text-gold text-sm transition-colors ease-out"
+                href="https://zeltechnologies.com/"
+                target="_blank"
+              >
+                Developed by Zeltechnologies
+              </Link>
             </p>
           </div>
           {/* copyrights */}

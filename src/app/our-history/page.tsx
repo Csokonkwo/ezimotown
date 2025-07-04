@@ -11,7 +11,7 @@ export default function HistoryPage() {
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col">
           <History />
-          <BlogStories />
+          <BlogStories categorySlug="our-history" />
         </main>
       </div>
       <Footer />

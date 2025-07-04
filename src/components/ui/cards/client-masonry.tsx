@@ -43,9 +43,7 @@ export default function ClientMasonry() {
               className={`relative overflow-hidden rounded-4xl md:rounded-[50px] group cursor-pointer ${index === gridItems.length - 2 ? 'grayscale' : ''}`}
             >
               {/* image container */}
-              <div
-                className="relative w-full h-auto"
-              >
+              <div className="relative w-full h-auto">
                 <Image
                   src={item.image}
                   alt={item.title}

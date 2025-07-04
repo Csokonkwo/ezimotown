@@ -14,7 +14,10 @@ import MagnifyIcon from '../svgs/search-icon';
 import Pagination from '../ui/pagination';
 
 const POSTS_PER_PAGE = 6;
-export default function BlogStories() {
+type BlogProps = {
+  categorySlug?: string;
+};
+export default function BlogStories({ categorySlug }: BlogProps) {
   const scrollRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [lightImages, setLightImages] = useState<
@@ -24,12 +27,32 @@ export default function BlogStories() {
   const [currentPage, setCurrentpage] = useState(1);
 
   const postQuery = useGetPosts();
-  const posts = postQuery?.data?.data;
+  const posts = postQuery?.data?.data || [];
 
-  const totalPosts = posts?.length;
+  let filteredPosts = posts;
+
+  if (categorySlug) {
+    const matchedPosts = posts.filter(
+      (post) =>
+        post.category?.slug?.toLowerCase() === categorySlug.toLowerCase(),
+    );
+    if (matchedPosts.length > 0) {
+      filteredPosts = matchedPosts;
+    } else {
+      filteredPosts = [...posts]
+        .sort(
+          (a, b) =>
+            new Date(b.published_at).getTime() -
+            new Date(a.published_at).getTime(),
+        )
+        .slice(0, 6);
+    }
+  }
+
+  const totalPosts = filteredPosts?.length;
   const totalPages = Math.ceil(totalPosts! / POSTS_PER_PAGE);
 
-  const paginatedPosts = posts?.slice(
+  const paginatedPosts = filteredPosts?.slice(
     (currentPage - 1) * POSTS_PER_PAGE,
     currentPage * POSTS_PER_PAGE,
   );
@@ -42,21 +65,11 @@ export default function BlogStories() {
     );
   }
 
-  if (postQuery?.isError) {
+  if (postQuery?.isError || !posts) {
     return (
-      <section className="w-full relative  bg-black pt-8 pb-6 sm:pt-16 md:pt-22.5 lg:pt-[67px] min-h-auto lg:min-h-[100vh] px-4  lg:px-20">
+      <section className="w-full relative bg-black pt-8 pb-6 sm:pt-16 md:pt-22.5 lg:pt-[67px] min-h-auto lg:min-h-[100vh] px-4 lg:px-20">
         <p className="font-normal text-[12px] text-center underline sm:no-underline sm:text-base text-white mb-2">
-          Error showing blogs
-        </p>
-      </section>
-    );
-  }
-
-  if (!posts || posts.length === 0) {
-    return (
-      <section className="w-full relative  bg-black pt-8 pb-6 sm:pt-16 md:pt-22.5 lg:pt-[67px] min-h-auto md:min-h-screen px-4  lg:px-20">
-        <p className="font-normal text-[12px] underline sm:no-underline sm:text-base text-white mb-2">
-          No blogs to show
+          {postQuery?.isError ? 'Error showing blogs' : 'No blogs to show'}
         </p>
       </section>
     );
@@ -112,7 +125,7 @@ export default function BlogStories() {
                   alt={imgs[0]?.alt}
                   width={434}
                   height={188}
-                  loading='lazy'
+                  loading="lazy"
                   className="max-h-[250px] object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 />
                 {/* Overlay for hover effect */}

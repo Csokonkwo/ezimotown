@@ -33,8 +33,9 @@ export default function RootLayout({
         className={`${poppins.variable} ${montserrat.variable}  antialiased`}
       >
         <ErrorBoundary>
-          <AppProvider>{children}
-          <BackToTop/>
+          <AppProvider>
+            {children}
+            <BackToTop />
           </AppProvider>
         </ErrorBoundary>
       </body>

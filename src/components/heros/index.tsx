@@ -30,7 +30,7 @@ export default function HeroSection({
   const backgroundUrl = `/assets/images/${bgImage}`;
   return (
     <>
-      <PageLoader/>
+      <PageLoader />
       {/* Preload the background image */}
       <Head>
         <link rel="preload" as="image" href={backgroundUrl} />
@@ -158,7 +158,6 @@ export default function HeroSection({
     </>
   );
 }
-
 
 // 'use client';
 

@@ -8,6 +8,4 @@ export default function CircularSpinner() {
       <div className="absolute top-0 left-0 w-full h-full border-4 border-l-transparent border-yellow-400 rounded-full animate-spin delay-150" />
     </div>
   );
-};
-
-
+}
