@@ -1,7 +1,7 @@
 import BlogStories from '@/components/blog-stories';
 import Footer from '@/components/footer/footer';
 import HistoryHero from '@/components/heros/history';
-import History from '@/components/history';
+// import History from '@/components/history';
 import { getHistory } from '@/features/history/api/get-history';
 import HistoryLists from '@/features/history/components/history-lists';
 import { Metadata } from 'next';
