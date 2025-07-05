@@ -8,7 +8,7 @@ const FootballHero = () => {
       description="Every year, Ezimo’s finest athletes gather for a thrilling
               football tournament that unites villages, ignites rivalries, and
               celebrates raw talent on the field."
-      bgImage="football-hero.jpg"
+      bgImage="football-hero1.jpg"
       subSections={[
         {
           title: 'The Pride of the Pitch',

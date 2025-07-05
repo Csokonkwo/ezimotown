@@ -197,6 +197,7 @@ body {
     rgba(0, 0, 0, 0.9) 82.69%
   );
 }
+
 .my-masonry-grid {
   display: flex;
   margin-left: -16px; /* gutter size offset */

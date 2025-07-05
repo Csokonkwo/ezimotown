@@ -14,7 +14,8 @@ export default function Navbar() {
     <>
       <PageLoader />
       <header
-        className={`relative bg-cover bg-black-15 bg-top bg-blend-overlay bg-[url(/assets/images/waterfall.jpg)] bg-linear(180deg,rgba(0_0_0_0)_64.71%,rgba(0_0_0_0.5)_82.69%) bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[65vh] md:h-[100vh] overflow-hidden`}
+        className={`relative bg-cover bg-black-15 bg-top bg-blend-overlay my-gradient-bg bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[65vh] md:h-[100vh] overflow-hidden`}
+        style={{backgroundImage:`url(/assets/images/home-hero.jpg)`}}
       >
         <div className="relative z-[2] overflow-hidden">
           <nav

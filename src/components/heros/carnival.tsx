@@ -8,7 +8,7 @@ const CarnivalHero = () => {
       description="The Ezimo Cultural Carnival is an explosion of tradition, where
               music, dance, and ancestral pride fill the streets in a dazzling
              display of Igbo culture."
-      bgImage="carnival-hero.jpg"
+      bgImage="carnival-hero.webp"
       subSections={[
         {
           title: 'A Celebration of Heritage',
