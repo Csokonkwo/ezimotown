@@ -77,7 +77,7 @@ export default function MarathonLists() {
         className="mt-12 lg:mt-[93px]"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 md:gap-0 w-full m-0 p-0">
-          {marathon?.galleries?.map((img) => (
+          {marathon?.galleries?.slice(0,4)?.map((img) => (
             <ScrollZoomImage
               key={img.id}
               src={`${process.env.NEXT_PUBLIC_URL}/${img.path}`}
