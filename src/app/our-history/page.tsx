@@ -23,7 +23,7 @@ export default function HistoryPage() {
       <HistoryHero />
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col">
-          <History />
+          {/* <History /> */}
           <HistoryLists />
           <BlogStories
             categorySlug="culture"

@@ -76,8 +76,32 @@ export default function HistoryLists() {
         imageSrc="/assets/images/history-carousel1.jpg"
         imagePosition="left"
         paragraphs={[
-          `Tucked within the rolling hills of Enugu State, Ezimo Town is more than just a dot on the map...`,
-          `Originally known as Ezi-Oma, which translates to "The Path of Goodness", the name evolved...`,
+          `Tucked within the rolling hills of Enugu State, Ezimo Town is more
+              than just a dot on the map—it's a vibrant tapestry woven with rich
+              stories, timeless legends, and an enduring legacy. Believed to
+              have been founded over 400 years ago, Ezimo emerged from the union
+              of several resilient ancestral clans who, through sheer
+              determination and courage, journeyed across dense forests, crossed
+              sacred rivers, and braved countless challenges to settle on this
+              blessed and fertile soil. Over centuries, these early settlers
+              built a thriving community, passing down customs, traditions, and
+              wisdom that continue to shape the town's identity today. Ezimo's
+              history is not just a tale of survival, but a testament to the
+              strength and unity of its people, who have always found ways to
+              adapt and thrive despite the challenges of time.`,
+          `Originally known as Ezi-Oma, which translates to "The Path of
+              Goodness," the name of the town evolved over time into Ezimo, a
+              reflection of the town's enduring spirit of unity, peace, and
+              strength. This transformation in name carries with it the essence
+              of the community's resilience and commitment to its roots. Oral
+              tradition speaks of a great and revered leader, Okpara Idu, a
+              visionary warrior and spiritual custodian who, guided by divine
+              revelation beneath the sacred Oji (kolanut) tree, led his people
+              across the rugged Ugwunye Hills to settle in the land that is now
+              known as Ezimo. His leadership not only marked the beginning of
+              the town's formation but also anchored its values of harmony and
+              foresight. From its earliest days, Ezimo quickly grew into a
+              cultural and economic powerhouse.`,
         ]}
         title="Brief History:"
       />
@@ -86,9 +110,34 @@ export default function HistoryLists() {
         imageSrc="/assets/images/history-carousel2.jpg"
         imagePosition="right"
         paragraphs={[
-          `Ezimo, now divided into Ezimo Uno and Ezimo Agu, has long stood as a beacon...`,
-          `It is said that the Ofia Ezimo (Ezimo forest) once echoed with the rhythmic chants...`,
-          `The town of Ezimo played a quiet but undeniably powerful role during the pre-independence era...`,
+          `Ezimo, now divided into Ezimo Uno and Ezimo Agu, has long stood as
+              a beacon of unity, culture, and craftsmanship. The town was one of
+              the first in the region to establish a self-rule system that
+              empowered its people, creating a framework of governance rooted in
+              tradition. This system, which predated colonial rule, was based on
+              village councils, age-grade groups, and vibrant masquerade
+              festivals that not only helped maintain law and order but also
+              preserved the rich cultural identity of Ezimo. In a time long
+              before colonial governance reached the rolling hills of the
+              region, Ezimo's community-led structure allowed the town to
+              thrive, creating a harmonious society where collective
+              decision-making and respect for tradition were paramount.`,
+          `It is said that the Ofia Ezimo (Ezimo forest) once echoed with the
+              rhythmic chants of warriors preparing for battle, the soft,
+              melodic songs of moonlit maidens celebrating harvests, and the
+              whispered tales of ancestors who walked the land before them.
+              These stories, passed down through generations, were not just
+              narratives but sacred teachings, guiding the people of Ezimo
+              through both times of prosperity and change. The forest, with its
+              dense canopy and quiet paths, stood as a living testament to the
+              town's history, holding the wisdom of their ancestors in every
+              breeze and rustling leaf.`,
+          `The town of Ezimo played a quiet but undeniably powerful role
+              during the pre-independence era, contributing significantly to the
+              broader political and social movements of the time. Many sons and
+              daughters of Ezimo were at the forefront of early missionary
+              education, civic organization, and the fight for national
+              liberation.`,
         ]}
       />
       <motion.div

@@ -36,7 +36,7 @@ export default function HistorySection({
               width={606}
               height={703}
               alt="History Image"
-              className="md:rounded-[7px] mx-auto object-cover duration-500 group-hover:scale-105"
+              className="md:rounded-[7px] mx-auto object-cover grayscale duration-500 group-hover:scale-105"
             />
           </div>
         )}
