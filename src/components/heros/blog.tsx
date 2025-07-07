@@ -126,7 +126,7 @@ const BlogHero = () => {
               viewport={{ root: scrollRef }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              <h3 className="font-helvetica text-white text-[10px] sm:text-sm md:text-xl lg:text-3xl font-normal mb-2 lg:mb-3">
+              <h3 className="font-helvetica text-white text-[10px] lg:max-w-[550px] sm:text-sm md:text-xl lg:text-3xl font-normal mb-2 lg:mb-3">
                 Ezimo Voices: Stories That Define Our Community
               </h3>
               <p className="font-helvetica text-white font-normal max-w-[150px] sm:max-w-[270px] md:max-w-[331px] text-[7.99px] sm:text-xs lg:text-sm">
