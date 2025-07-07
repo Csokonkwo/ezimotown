@@ -12,15 +12,11 @@ const IyiNzuHero = () => {
       subSections={[
         {
           title: 'Nature’s Masterpiece in Ezimo',
-          para: `Cascading through lush, untouched greenery, the Iyi-Nzu
-                Waterfall is a breathtaking natural wonder that captures the
-                soul of Ezimo’s beauty.`,
+          para: `Flowing gracefully through verdant, untouched landscapes, the Iyi-Nzu Waterfall stands as a stunning natural marvel, embodying the serene beauty and spirit of Ezimo.`,
         },
         {
           title: 'Where Legends Meet the Falls',
-          para: `Ezimo is characterized by its peaceful atmosphere and communal
-                lifestyle. The community is known for its hospitality and strong
-                 sense of identity.`,
+          para: `In Ezimo, the majestic Iyi-Nzu Waterfall flows as a living legend, weaving nature’s beauty into the fabric of the town’s peaceful and welcoming community. Known for its warm hospitality and strong sense of identity, Ezimo is a place where tradition and nature come together to create an unforgettable experience for residents and visitors alike.`,
         },
       ]}
     />

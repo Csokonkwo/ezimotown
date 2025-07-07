@@ -36,7 +36,7 @@ export default function HeroSection({
         <link rel="preload" as="image" href={backgroundUrl} />
       </Head>
       <header
-        className={`relative bg-cover bg-top my-gradient-bg bg-black-15 bg-blend-overlay bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[65vh] md:h-[100vh] overflow-hidden`}
+        className={`relative bg-cover bg-top my-gradient-bg bg-black-15 bg-blend-overlay bg-no-repeat md:bg-center  w-full h-[60vh] sm:h-[75vh] md:h-[100vh] overflow-hidden`}
         style={{
           backgroundImage: `url(${backgroundUrl})`,
         }}
@@ -120,7 +120,7 @@ export default function HeroSection({
               whileInView={{ y: 0 }}
               viewport={{ root: scrollRef }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-white font-helvetica mx-auto max-w-[179px] sm:max-w-sm md:max-w-3xl lg:max-w-[893px] text-[7.21px] sm:text-sm lg:text-lg font-normal text-center"
+              className="text-white font-helvetica mx-auto max-w-xs sm:max-w-md md:max-w-3xl lg:max-w-[893px] text-[7.21px] sm:text-sm lg:text-lg font-normal text-center"
             >
               {description}
             </motion.p>
@@ -141,10 +141,10 @@ export default function HeroSection({
                   viewport={{ root: scrollRef }}
                   transition={{ delay: 0.3, duration: 0.8 }}
                 >
-                  <h3 className="font-helvetica text-white text-[10px] sm:text-sm md:text-xl lg:text-3xl font-normal mb-2 lg:mb-3">
+                  <h3 className="font-helvetica text-white text-[12px] sm:text-sm md:text-xl lg:text-3xl font-normal mb-2 lg:mb-3">
                     {section.title}
                   </h3>
-                  <p className="font-helvetica  text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[7.99px] sm:text-xs lg:text-sm">
+                  <p className="font-helvetica  text-white font-normal max-w-[150px] sm:max-w-[270px] md:max-w-[331px] text-[8.99px] sm:text-xs lg:text-sm">
                     {section.para}
                   </p>
                 </motion.div>

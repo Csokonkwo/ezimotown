@@ -16,7 +16,7 @@ const BlogHero = () => {
     <>
       <PageLoader />
       <header
-        className={`relative bg-cover bg-top my-gradient-bg bg-black-15 bg-blend-overlay bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[65vh] md:h-[100vh] overflow-hidden`}
+        className={`relative bg-cover bg-top my-gradient-bg bg-black-15 bg-blend-overlay bg-no-repeat md:bg-center  w-full h-[60vh] sm:h-[75vh] md:h-[100vh] overflow-hidden`}
         style={{
           backgroundImage: `url(/assets/images/blog-hero.jpg)`,
         }}
@@ -108,12 +108,9 @@ const BlogHero = () => {
               whileInView={{ y: 0 }}
               viewport={{ root: scrollRef }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-white font-helvetica mx-auto max-w-[179px] sm:max-w-sm md:max-w-[893px] text-[7.21px] sm:text-sm lg:text-lg font-normal text-center"
+              className="text-white font-helvetica mx-auto max-w-xs sm:max-w-sm md:max-w-[893px] text-[7.21px] sm:text-sm lg:text-lg font-normal text-center mt-1"
             >
-              The Ezimo Cultural Carnival is an explosion of tradition, where
-              music, dance, and ancestral Stories, voices, and vibrant moments
-              from Ezimo — where heritage, culture, and community come alive
-              through everyday life.
+             Dive into the heart of Ezimo with stories, voices, and vibrant moments that bring our heritage and culture to life. From colorful festivals and ancestral tales to everyday life in the community, our blog celebrates the rich traditions and dynamic spirit that make Ezimo unique. Stay connected and explore the stories that shape our town’s past, present, and future.
             </motion.p>
           </div>
           {/* content */}
@@ -130,12 +127,10 @@ const BlogHero = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
             >
               <h3 className="font-helvetica text-white text-[10px] sm:text-sm md:text-xl lg:text-3xl font-normal mb-2 lg:mb-3">
-                Ezimo Voices: Stories That Shape Us
+                Ezimo Voices: Stories That Define Our Community
               </h3>
-              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[7.99px] sm:text-xs lg:text-sm">
-                Dive into the heartbeat of Ezimo through stories, opinions, and
-                reflections from our people. From historic tales to modern-day
-                triumphs,
+              <p className="font-helvetica text-white font-normal max-w-[150px] sm:max-w-[270px] md:max-w-[331px] text-[7.99px] sm:text-xs lg:text-sm">
+              Experience the spirit of Ezimo through the personal stories, insights, and experiences of its people. From timeless legends to contemporary achievements, our voices come together to celebrate the resilience, culture, and dreams that shape who we are today.
               </p>
             </motion.div>
             <motion.div
@@ -148,11 +143,8 @@ const BlogHero = () => {
               <h3 className="font-helvetica text-white text-[10px] sm:text-sm md:text-xl lg:text-3xl font-normal mb-2 lg:mb-3">
                 News, Culture & Community
               </h3>
-              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[7.99px] sm:text-xs lg:text-sm">
-                Stay informed and inspired with the latest updates, event
-                highlights, cultural insights, and community spotlights. Whether
-                you’re near or far, our blog keeps you connected to the life and
-                soul of Ezimo.
+              <p className="font-helvetica text-white font-normal max-w-[150px] sm:max-w-[270px] md:max-w-[331px] text-[7.99px] sm:text-xs lg:text-sm">
+              Keep up with the latest happenings, vibrant cultural stories, and inspiring community highlights from Ezimo. Whether you’re a local or afar, our blog brings you closer to the heart, traditions, and everyday life that make Ezimo special.
               </p>
             </motion.div>
           </div>

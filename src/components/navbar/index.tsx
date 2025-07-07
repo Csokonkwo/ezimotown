@@ -14,7 +14,7 @@ export default function Navbar() {
     <>
       <PageLoader />
       <header
-        className={`relative bg-cover bg-black-15 bg-top bg-blend-overlay my-gradient-bg bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[75vh] md:h-screen overflow-x-hidden`}
+        className={`relative bg-cover bg-black-15 bg-top bg-blend-overlay my-gradient-bg bg-no-repeat md:bg-center  w-full h-[60vh] sm:h-[75vh] md:h-screen overflow-x-hidden`}
         style={{backgroundImage:`url(/assets/images/home-hero.jpg)`}}
       >
         <div className="relative z-[2] overflow-hidden">
@@ -117,7 +117,7 @@ export default function Navbar() {
               <h3 className="font-helvetica text-white text-[10px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
                 Cultural and Historical Insights
               </h3>
-              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[500px] text-[7.99px] sm:text-xs md:text-sm">
+              <p className="font-helvetica text-white font-normal max-w-[150px] sm:max-w-[270px] md:max-w-[500px] text-[7.99px] sm:text-xs md:text-sm">
               Ezimo Town is deeply rooted in its ancestral traditions, with the installation of sacred symbols and monuments reflecting the community’s unwavering commitment to preserving its rich cultural heritage. From the revered Iyi-Nzu Waterfall to the time-honored carnivals, Ezimo continues to honor its past while embracing progress for the future.
               </p>
             </motion.div>
@@ -130,7 +130,7 @@ export default function Navbar() {
               <h3 className="font-helvetica text-white text-[10px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
                 Community and Lifestyle
               </h3>
-              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[500px] text-[7.99px] sm:text-xs md:text-sm">
+              <p className="font-helvetica text-white font-normal max-w-[150px] sm:max-w-[270px] md:max-w-[500px] text-[7.99px] sm:text-xs md:text-sm">
               Ezimo is a town where peace and unity thrive, nestled in a close-knit community that values togetherness and mutual support. Known for its warm hospitality, the people of Ezimo share a deep sense of pride in their heritage and identity. Whether through communal gatherings or shared traditions, the spirit of cooperation is at the heart of daily life, fostering a sense of belonging and harmony among all who call this vibrant town home.
               </p>
             </motion.div>

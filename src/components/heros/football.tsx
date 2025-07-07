@@ -12,16 +12,11 @@ const FootballHero = () => {
       subSections={[
         {
           title: 'The Pride of the Pitch',
-          para: `The Ezimo Annual Football Tournament isn’t just a match — it’s a
-                cultural festival where drums, dance, and community spirit
-                electrify the air from kickoff to final whistle.`,
+          para: `The Ezimo Annual Football Tournament is more than just a game, it’s a thrilling display of skill, passion, and community pride, where the energy of cheering fans, rhythmic drumming, and spirited dance creates an unforgettable atmosphere from kickoff to the final whistle.`,
         },
         {
           title: 'More Than a Game',
-          para: `From humble beginnings to packed sidelines, this beloved
-                tournament has become a proving ground for young stars and a
-                symbol of Ezimo's unity, strength, and passion for the beautiful
-                game.`,
+          para: `What started as a modest gathering has grown into a celebrated tournament that draws enthusiastic crowds and showcases rising talents. It stands as a powerful symbol of Ezimo’s unity, resilience, and deep passion for football, inspiring both players and fans alike.`,
         },
       ]}
     />
