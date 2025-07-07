@@ -11,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const history = await getHistory();
   const firstItem = history?.data?.posts[0];
   return {
-    title: firstItem?.meta_title || 'History',
-    description: firstItem?.meta_description || 'Explore Our Culture',
+    title: firstItem?.meta_title || 'History Page',
+    description: firstItem?.meta_description || 'Explore Ezimo Culture',
     keywords: firstItem?.meta_keywords?.split(',') || [],
   };
 }

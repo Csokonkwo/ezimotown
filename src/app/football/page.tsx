@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: firstItem?.meta_title || 'Football Page',
     description:
       firstItem?.meta_description ||
-      'Understand how football tactics have changed over the years',
+      'Explore Ezimo Football League',
     keywords: firstItem?.meta_keywords?.split(',') || [],
   };
 }

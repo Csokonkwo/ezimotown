@@ -17,9 +17,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Expolore Ezimo Town',
+  title: 'Explore Ezimo Town',
   description:
-    'Ezimo Town is rich in Heritage and History. The Town is home to the Iyi-Nzu Waterfall ',
+    'Deje! Ezimo Town is a treasure trove of heritage and history, proudly home to the breathtaking Iyi-Nzu Waterfall, a natural wonder that adds to the town’s rich cultural legacy.',
 };
 
 export default function RootLayout({

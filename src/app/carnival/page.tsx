@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: firstItem?.meta_title || 'Carnival Page',
     description:
-      firstItem?.meta_description || 'Discover the festival of a lifetime.',
+      firstItem?.meta_description || 'Explore Ezimo Carnival ',
     keywords: firstItem?.meta_keywords?.split(',') || [],
   };
 }

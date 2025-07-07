@@ -9,10 +9,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const waterfall = await getWaterfall();
   const firstItem = waterfall?.data?.posts[0];
   return {
-    title: firstItem?.meta_title || 'Iyi Nzu',
+    title: firstItem?.meta_title || 'Iyi Nzu Page',
     description:
       firstItem?.meta_description ||
-      'Discover Angel Falls, the tallest waterfall on Earth',
+      'Explore Ezimo Waterfall',
     keywords: firstItem?.meta_keywords?.split(',') || [],
   };
 }

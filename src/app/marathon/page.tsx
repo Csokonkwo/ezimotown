@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const firstItem = marathon?.data?.posts[0];
   return {
     title: firstItem?.meta_title || 'Marathon Page',
-    description: firstItem?.meta_description || '',
+    description: firstItem?.meta_description || 'Explore Ezimo Marathon Event',
     keywords: firstItem?.meta_keywords?.split(',') || [],
   };
 }

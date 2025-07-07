@@ -118,7 +118,7 @@ export const gridItems = [
   {
     id: 3,
     title: 'Carnival',
-    content: `A vibrant celebration of our culture, music, and dance that brings the entire community together in colorful unity.`,
+    content: `The Ezimo Carnival is a vibrant and joyous celebration of our rich culture, where music, dance, and colorful masquerades light up the town. It’s a time when the entire community comes together in unity to enjoy traditional foods, thrilling sports competitions, and lively performances. This festive event showcases the creativity, heritage, and strong communal spirit that define Ezimo, making it a highlight of the year for residents and visitors alike.`,
     image: '/assets/images/carnival-grid.png',
   },
   {

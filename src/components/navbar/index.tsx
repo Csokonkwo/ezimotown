@@ -14,12 +14,12 @@ export default function Navbar() {
     <>
       <PageLoader />
       <header
-        className={`relative bg-cover bg-black-15 bg-top bg-blend-overlay my-gradient-bg bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[65vh] md:h-[100vh] overflow-hidden`}
+        className={`relative bg-cover bg-black-15 bg-top bg-blend-overlay my-gradient-bg bg-no-repeat md:bg-center  w-full h-[50vh] sm:h-[75vh] md:h-screen overflow-x-hidden`}
         style={{backgroundImage:`url(/assets/images/home-hero.jpg)`}}
       >
         <div className="relative z-[2] overflow-hidden">
           <nav
-            className={`flex items-center bg-black md:bg-transparent justify-between px-6 lg:pl-[72px] lg:pr-[81px] py-10 h-[61px] md:pb-[105px] md:pt-[105px]  w-full`}
+            className={`flex items-center bg-black md:bg-transparent justify-between px-6 lg:pl-[72px] lg:pr-[81px] py-10 h-[61px] md:pb-24 md:pt-16  w-full`}
           >
             {/* logo */}
             <Link
@@ -81,7 +81,7 @@ export default function Navbar() {
           {/* header-subcontainer */}
 
           {/* content */}
-          <div className="text-center mt-6 md:mt-12">
+          <div className="text-center mt-6">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -98,8 +98,7 @@ export default function Navbar() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-white font-helvetica mx-auto max-w-[179px] sm:max-w-sm md:max-w-[496px] text-[7.21px] sm:text-sm md:text-lg font-normal text-center"
             >
-              Ezimo Town is rich in Heritage and History. The Town is home to
-              Ezimo is home to the Iyi-Nzu Waterfall
+              Deje! Ezimo Town is a treasure trove of heritage and history, proudly home to the breathtaking Iyi-Nzu Waterfall, a natural wonder that adds to the town’s rich cultural legacy.
             </motion.p>
           </div>
           {/* content */}
@@ -118,10 +117,8 @@ export default function Navbar() {
               <h3 className="font-helvetica text-white text-[10px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
                 Cultural and Historical Insights
               </h3>
-              <p className="font-helvetica sm:text-center text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[7.99px] sm:text-xs md:text-sm">
-                The Installation of ancestral symbols is part of the historical
-                developments of the people, reflecting their commitment to
-                preserving cultural heritage.
+              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[500px] text-[7.99px] sm:text-xs md:text-sm">
+              Ezimo Town is deeply rooted in its ancestral traditions, with the installation of sacred symbols and monuments reflecting the community’s unwavering commitment to preserving its rich cultural heritage. From the revered Iyi-Nzu Waterfall to the time-honored carnivals, Ezimo continues to honor its past while embracing progress for the future.
               </p>
             </motion.div>
             <motion.div
@@ -133,10 +130,8 @@ export default function Navbar() {
               <h3 className="font-helvetica text-white text-[10px] sm:text-sm md:text-3xl font-normal mb-2 lg:mb-3">
                 Community and Lifestyle
               </h3>
-              <p className="font-helvetica sm:text-center text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[331px] text-[7.99px] sm:text-xs md:text-sm">
-                Ezimo is characterized by its peaceful atmosphere and communal
-                lifestyle. The community is known for its hospitality and strong
-                sense of identity.{' '}
+              <p className="font-helvetica text-white font-normal max-w-[109px] sm:max-w-[270px] md:max-w-[500px] text-[7.99px] sm:text-xs md:text-sm">
+              Ezimo is a town where peace and unity thrive, nestled in a close-knit community that values togetherness and mutual support. Known for its warm hospitality, the people of Ezimo share a deep sense of pride in their heritage and identity. Whether through communal gatherings or shared traditions, the spirit of cooperation is at the heart of daily life, fostering a sense of belonging and harmony among all who call this vibrant town home.
               </p>
             </motion.div>
           </div>
