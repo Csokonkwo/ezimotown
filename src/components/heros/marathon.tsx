@@ -10,11 +10,11 @@ const MarathonHero = () => {
       subSections={[
         {
           title: 'A Celebration of Heritage',
-          para: `The Ezimo Marathon is more than a race, it’s a vibrant journey that weaves athletic endurance with the rich tapestry of our culture. Along the route, runners and spectators alike experience colorful masquerades, folklore reenactments, and lively festivities that bring Ezimo’s heritage to life in every step.`,
+          para: `The Ezimo Marathon is more than a race, it’s a vibrant journey that weaves athletic endurance with the rich tapestry of our culture. Along the route, runners and spectators alike experience colorful masquerades, folklore reenactments.`,
         },
         {
           title: 'Where Endurance Meets Community',
-          para: `The annual Ezimo Marathon is a powerful testament to the town’s spirit bringing together athletes and supporters of all ages to celebrate perseverance, health, and togetherness against the backdrop of Ezimo’s stunning landscapes. It’s more than a race; it’s a shared journey that strengthens bonds and inspires pride in the community.`,
+          para: `The Ezimo Marathon is more than a race, it’s a shared journey that strengthens bonds and inspires pride in the community. Along the route, runners and spectators alike experience colorful masquerades, folklore reenactments, and lively festivities that bring Ezimo’s heritage to life`,
         },
       ]}
     />

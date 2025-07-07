@@ -1,12 +1,12 @@
 import Footer from '@/components/footer/footer';
-import Navbar from '@/components/navbar/index';
 import OurHome from '@/components/our-home';
 import GallerySection from '@/components/gallery';
 import BlogStories from '@/components/blog-stories';
+import HomeHero from '@/components/heros/home';
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <HomeHero/>
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col overflow-hidden">
           <OurHome />

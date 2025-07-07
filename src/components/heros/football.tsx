@@ -16,7 +16,7 @@ const FootballHero = () => {
         },
         {
           title: 'More Than a Game',
-          para: `What started as a modest gathering has grown into a celebrated tournament that draws enthusiastic crowds and showcases rising talents. It stands as a powerful symbol of Ezimo’s unity, resilience, and deep passion for football, inspiring both players and fans alike.`,
+          para: `What started as a Ezimo’sgathering has grown into a celebrated tournament that draws enthusiastic crowds and showcases rising talents. It stands as a powerful symbol of Ezimo’s unity, resilience, and deep passion for football, inspiring both players and fans alike.`,
         },
       ]}
     />

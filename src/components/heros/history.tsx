@@ -14,7 +14,7 @@ const HistoryHero = () => {
         },
         {
           title: 'Embrace our Roots',
-          para: `Ezimo is a serene community where peaceful living and strong bonds define everyday life. Known for its warm hospitality and deep sense of identity, the town proudly upholds its traditions and close-knit spirit.`,
+          para: `In the heart of Ezimo lies a community shaped by peace, unity, and timeless tradition. With a deep sense of identity and unwavering hospitality, Ezimo embodies the strength of its roots where every handshake tells a story, and every gathering strengthens the bond of family and culture.`,
         },
       ]}
     />

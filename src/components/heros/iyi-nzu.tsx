@@ -16,7 +16,7 @@ const IyiNzuHero = () => {
         },
         {
           title: 'Where Legends Meet the Falls',
-          para: `In Ezimo, the majestic Iyi-Nzu Waterfall flows as a living legend, weaving nature’s beauty into the fabric of the town’s peaceful and welcoming community. Known for its warm hospitality and strong sense of identity, Ezimo is a place where tradition and nature come together to create an unforgettable experience for residents and visitors alike.`,
+          para: `In Ezimo, the majestic Iyi-Nzu Waterfall flows as a living legend, weaving nature’s beauty into the fabric of the town. Ezimo is a place where tradition and nature come together to create an unforgettable experience for residents and visitors alike.`,
         },
       ]}
     />
