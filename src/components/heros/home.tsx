@@ -4,7 +4,12 @@ import HeroSection from '.';
 const HomeHero = () => {
   return (
     <HeroSection
-      title={<> Explore <br /> Ezimo Town </>}
+      title={
+        <>
+          {' '}
+          Explore <br /> Ezimo Town{' '}
+        </>
+      }
       description=" Deje! Ezimo Town is a treasure trove of heritage and history, proudly home to the breathtaking Iyi-Nzu Waterfall, a natural wonder that adds to the town’s rich cultural legacy."
       bgImage="home-hero.jpg"
       subSections={[

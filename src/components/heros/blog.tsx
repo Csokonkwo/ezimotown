@@ -110,7 +110,11 @@ const BlogHero = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-white font-helvetica mx-auto max-w-xs sm:max-w-sm md:max-w-[893px] text-[7.21px] sm:text-sm lg:text-lg font-normal text-center mt-1"
             >
-            Dive into the heart of Ezimo with stories, voices, and vibrant moments that bring our heritage and culture to life. From colorful festivals and ancestral tales to everyday life in the community, our blog celebrates the rich traditions and dynamic spirit that make Ezimo unique.
+              Dive into the heart of Ezimo with stories, voices, and vibrant
+              moments that bring our heritage and culture to life. From colorful
+              festivals and ancestral tales to everyday life in the community,
+              our blog celebrates the rich traditions and dynamic spirit that
+              make Ezimo unique.
             </motion.p>
           </div>
           {/* content */}
@@ -130,7 +134,11 @@ const BlogHero = () => {
                 Ezimo Voices: Stories That Define Our Community
               </h3>
               <p className="font-helvetica text-white line-clamp-4 sm:line-clamp-none font-normal max-w-[150px] sm:max-w-[270px] md:max-w-[331px] text-[7.99px] sm:text-xs lg:text-sm">
-              Experience the spirit of Ezimo through the personal stories, insights, and experiences of its people. From timeless legends to contemporary achievements, our voices come together to celebrate the resilience, culture, and dreams that shape who we are today.
+                Experience the spirit of Ezimo through the personal stories,
+                insights, and experiences of its people. From timeless legends
+                to contemporary achievements, our voices come together to
+                celebrate the resilience, culture, and dreams that shape who we
+                are today.
               </p>
             </motion.div>
             <motion.div
@@ -144,7 +152,10 @@ const BlogHero = () => {
                 News, Culture & Community
               </h3>
               <p className="font-helvetica text-white line-clamp-4 sm:line-clamp-none font-normal max-w-[150px] sm:max-w-[270px] md:max-w-[331px] text-[7.99px] sm:text-xs lg:text-sm">
-              Whether you’re a local or afar, our blog brings you closer to the heart, traditions, and everyday life that make Ezimo special. Stay connected and explore the stories that shape our town’s past, present, and future.
+                Whether you’re a local or afar, our blog brings you closer to
+                the heart, traditions, and everyday life that make Ezimo
+                special. Stay connected and explore the stories that shape our
+                town’s past, present, and future.
               </p>
             </motion.div>
           </div>

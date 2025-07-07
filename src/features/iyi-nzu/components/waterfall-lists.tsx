@@ -78,13 +78,15 @@ export default function WaterfallLists() {
         className="mt-12 lg:mt-[93px]"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 md:gap-0 w-full m-0 p-0">
-          {waterfall?.galleries?.slice(0,4)?.map((img) => (
-            <ScrollZoomImage
-              key={img.id}
-              src={`${process.env.NEXT_PUBLIC_URL}/${img.path}`}
-              alt={`${img.label} Images`}
-            />
-          ))}
+          {waterfall?.galleries
+            ?.slice(0, 4)
+            ?.map((img) => (
+              <ScrollZoomImage
+                key={img.id}
+                src={`${process.env.NEXT_PUBLIC_URL}/${img.path}`}
+                alt={`${img.label} Images`}
+              />
+            ))}
         </div>
       </motion.div>
     </section>

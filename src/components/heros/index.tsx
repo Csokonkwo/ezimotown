@@ -8,6 +8,7 @@ import { navLinks } from '@/constants';
 import MobileNav from '../mobile-menu';
 import Head from 'next/head';
 import PageLoader from '../ui/spinner/page-loader';
+import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react';
 type HeroProps = {
   title: string | React.ReactNode;
   description: string;
@@ -144,9 +145,21 @@ export default function HeroSection({
                   <h3 className="font-helvetica text-white text-[12px] sm:text-sm md:text-xl lg:text-3xl font-normal mb-2 lg:mb-3">
                     {section.title}
                   </h3>
-                  <p className="font-helvetica  text-white line-clamp-4 sm:line-clamp-none font-normal max-w-[150px] sm:max-w-[270px] md:max-w-[331px] text-[8.99px] sm:text-xs lg:text-sm">
-                    {section.para}
-                  </p>
+                  <Popover className="relative">
+                    {({ open }) => (
+                      <>
+                        <PopoverButton className="focus:outline-none w-full text-left">
+                          <p className="font-helvetica text-white line-clamp-4 sm:line-clamp-none font-normal max-w-[150px] sm:max-w-[270px] md:max-w-[331px] text-[8.99px] sm:text-xs lg:text-sm">
+                            {section.para}
+                          </p>
+                        </PopoverButton>
+
+                        <PopoverPanel className="absolute z-[99999] top-full mt-2 left-0 w-72 p-3 rounded-md bg-black  text-white shadow-lg">
+                          <p className="font-helvetica text-white font-normal text-[8.99px] sm:text-xs lg:text-sm">{section.para}</p>
+                        </PopoverPanel>
+                      </>
+                    )}
+                  </Popover>
                 </motion.div>
               ))}
             </div>
@@ -158,4 +171,3 @@ export default function HeroSection({
     </>
   );
 }
-

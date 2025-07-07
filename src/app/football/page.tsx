@@ -11,9 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const firstItem = football?.data?.posts[0];
   return {
     title: firstItem?.meta_title || 'Football Page',
-    description:
-      firstItem?.meta_description ||
-      'Explore Ezimo Football League',
+    description: firstItem?.meta_description || 'Explore Ezimo Football League',
     keywords: firstItem?.meta_keywords?.split(',') || [],
   };
 }

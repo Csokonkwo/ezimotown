@@ -6,7 +6,7 @@ import HomeHero from '@/components/heros/home';
 export default function Home() {
   return (
     <>
-      <HomeHero/>
+      <HomeHero />
       <div className="min-h-screen  font-helvetica">
         <main className="flex flex-col overflow-hidden">
           <OurHome />

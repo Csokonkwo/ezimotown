@@ -11,8 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const firstItem = carnival?.data?.posts[0];
   return {
     title: firstItem?.meta_title || 'Carnival Page',
-    description:
-      firstItem?.meta_description || 'Explore Ezimo Carnival ',
+    description: firstItem?.meta_description || 'Explore Ezimo Carnival ',
     keywords: firstItem?.meta_keywords?.split(',') || [],
   };
 }
