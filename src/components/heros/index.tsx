@@ -105,7 +105,7 @@ export default function HeroSection({
           {/* header-subcontainer */}
 
           {/* content */}
-          <div className="text-center mt-6 md:mt-12">
+          <div className="text-center mt-12">
             <motion.h1
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
