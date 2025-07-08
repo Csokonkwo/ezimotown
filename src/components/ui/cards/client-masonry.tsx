@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { gridItems } from '@/constants';
 
