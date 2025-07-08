@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 import { Button } from '../ui/buttons';
 import Image from 'next/image';
 import ArrowIcon from '../svgs/arrow-icon';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { cardVariant } from '../ui/cards/client-masonry';
 import Link from 'next/link';
 import { paths } from '@/config/paths';
