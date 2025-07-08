@@ -37,7 +37,7 @@ export default function HeroSection({
         <link rel="preload" as="image" href={backgroundUrl} />
       </Head>
       <header
-        className={`relative bg-cover bg-top my-gradient-bg bg-black-15 bg-blend-overlay bg-no-repeat md:bg-center  w-full h-[55vh] sm:h-[75vh] md:h-[100vh] overflow-hidden`}
+        className={`relative bg-cover max-w-[1920px] mx-auto bg-top my-gradient-bg bg-black-15 bg-blend-overlay bg-no-repeat md:bg-center  w-full h-[55vh] sm:h-[75vh] lg:h-screen overflow-hidden`}
         style={{
           backgroundImage: `url(${backgroundUrl})`,
         }}
@@ -130,9 +130,8 @@ export default function HeroSection({
           {/*subsection start */}
           {subSections.length > 0 && (
             <div
-              className="flex justify-between w-full mt-10 lg:mt-24 px-8 lg:px-[94px]"
+              className="flex justify-between w-full mt-10 lg:mt-24 px-8 lg:px-[94px] overflow-hidden"
               ref={scrollRef}
-              style={{ overflow: 'scroll' }}
             >
               {subSections.map((section, idx) => (
                 <motion.div

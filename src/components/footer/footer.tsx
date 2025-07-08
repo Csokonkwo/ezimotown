@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="bg-cover relative  overflow-hidden bg-black-8 bg-blend-overlay bg-no-repeat bg-center w-full h-[424px]"
+      className="bg-cover relative max-w-[1920px] mx-auto overflow-hidden bg-black-8 bg-blend-overlay bg-no-repeat bg-center w-full h-[424px]"
       style={{ backgroundImage: `url(/assets/images/gold-background-2.png)` }}
     >
       {/* footer-container */}
@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
           {/* links */}
           {/* copyrights */}
-          <div className="mt-16 lg:mt-24 flex w-full justify-start md:justify-end">
+          <div className="mt-16 lg:mt-24 flex w-full justify-start md:justify-end overflow-hidden">
             <p className="text-white mx-auto sm:mx-0 font-normal text-[11px] md:text-[18px] -tracking-[0.03em]">
               &copy; {new Date().getFullYear()} Ezimo Town. All rights reserved
               |{' '}

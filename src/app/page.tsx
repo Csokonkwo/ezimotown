@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <>
       <HomeHero />
-      <div className="min-h-screen  font-helvetica">
-        <main className="flex flex-col overflow-hidden">
+      <div className="min-h-screen font-helvetica w-full">
+        <main className="flex flex-col max-w-[1920px] mx-auto overflow-hidden">
           <OurHome />
           <GallerySection />
           <BlogStories />
