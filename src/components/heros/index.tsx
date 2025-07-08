@@ -155,7 +155,9 @@ export default function HeroSection({
                         </PopoverButton>
 
                         <PopoverPanel className="absolute z-[99999] top-full mt-2 left-0 w-72 p-3 rounded-md bg-black  text-white shadow-lg">
-                          <p className="font-helvetica text-white font-normal text-[8.99px] sm:text-xs lg:text-sm">{section.para}</p>
+                          <p className="font-helvetica text-white font-normal text-[8.99px] sm:text-xs lg:text-sm">
+                            {section.para}
+                          </p>
                         </PopoverPanel>
                       </>
                     )}
