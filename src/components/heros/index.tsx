@@ -37,7 +37,7 @@ export default function HeroSection({
         <link rel="preload" as="image" href={backgroundUrl} />
       </Head>
       <header
-        className={`relative bg-cover max-w-[1920px] mx-auto bg-top my-gradient-bg bg-black-15 bg-blend-overlay bg-no-repeat md:bg-center  w-full h-full max-h-[55vh] sm:max-h-[75vh] md:max-h-screen overflow-hidden`}
+        className={`relative bg-cover max-w-[1920px] mx-auto bg-top my-gradient-bg bg-black-15 bg-blend-overlay bg-no-repeat md:bg-center  w-full h-[55vh] sm:h-[75vh] md:h-screen overflow-hidden`}
         style={{
           backgroundImage: `url(${backgroundUrl})`,
         }}
