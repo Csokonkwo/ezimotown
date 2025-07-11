@@ -40,7 +40,7 @@ export default function ClientMasonry() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}
-              className={`relative overflow-hidden rounded-4xl md:rounded-[50px] group cursor-pointer ${index === gridItems.length - 2 ? 'grayscale' : ''}`}
+              className={`relative overflow-hidden rounded-xl md:rounded-[50px] group cursor-pointer ${index === gridItems.length - 2 ? 'grayscale' : ''}`}
             >
               {/* image container */}
               <div className="relative w-full h-auto">
