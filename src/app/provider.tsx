@@ -30,7 +30,7 @@ export const AppProvider = ({ children }: AppProviderProps) => {
         <ToastContainer position="top-right" autoClose={4000} />
         <AuthLoader
           renderLoading={() => (
-            <div className="flex relative h-screen w-screen bg-black items-center justify-center">
+            <div className="flex relative h-screen w-full max-w-[1920px] mx-auto bg-black items-center justify-center">
               <Spinner />
             </div>
           )}

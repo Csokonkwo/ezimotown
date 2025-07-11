@@ -81,7 +81,7 @@ export default function BlogStories({
   };
 
   return (
-    <section className="w-full relative  bg-black pt-8 pb-6 sm:pt-16 md:pt-22.5 lg:pt-[67px] min-h-auto md:min-h-screen  px-6  lg:px-20 overflow-hidden">
+    <section className="w-full relative max-w-[1920px] mx-auto  bg-black pt-8 pb-6 sm:pt-16 md:pt-22.5 lg:pt-[67px] min-h-auto md:min-h-screen  px-6  lg:px-20 overflow-hidden">
       <div className="flex justify-between items-center pb-8 md:pb-16">
         <div>
           <motion.h6 className="text-gray-80 text-[14px] sm:text-xl md:text-2xl font-normal">

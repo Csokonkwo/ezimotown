@@ -3,6 +3,7 @@ import OurHome from '@/components/our-home';
 import GallerySection from '@/components/gallery';
 import BlogStories from '@/components/blog-stories';
 import HomeHero from '@/components/heros/home';
+import ContactForm from '@/components/contact-form';
 export default function Home() {
   return (
     <>
@@ -12,6 +13,7 @@ export default function Home() {
           <OurHome />
           <GallerySection />
           <BlogStories />
+          <ContactForm />
         </main>
       </div>
       <Footer />

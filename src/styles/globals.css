@@ -30,7 +30,11 @@ html {
   --color-black-10: #1a1a1a;
   --color-gray-60: #98989a;
   --color-gray-80: #cccccc;
+  --color-grey-10: #1a1a1a;
+  --color-grey-15: #262626;
+  --color-grey-40: #666666;
   --color-gold: #ffd11a;
+  --color-light-gold: #ce9904e5;
   --font-poppins: Poppins, sans-serif;
   --font-montserrat: Montserrat, sans-serif;
   --font-helvetica: Helvetica, sans-serif;
