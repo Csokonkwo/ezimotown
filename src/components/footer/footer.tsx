@@ -34,7 +34,7 @@ export default function Footer() {
         {/* logo */}
         <div className="flex flex-col">
           {/* links */}
-          <div className="grid grid-cols-3 gap-5 sm:grid-cols-3 md:gap-10">
+          <div className="flex gap-10 justify-center md:justify-end">
             {footerLinks.map((link) => (
               <motion.div
                 transition={{ ease: 'easeInOut', duration: 0.75 }}

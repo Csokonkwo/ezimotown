@@ -41,27 +41,6 @@ export const footerLinks = [
       },
     ],
   },
-  {
-    id: 'support',
-    title: 'Support',
-    children: [
-      {
-        id: 'faqs',
-        title: 'FAQs',
-        url: '/faqs',
-      },
-      {
-        id: 'support center',
-        title: 'Support Center',
-        url: '/support',
-      },
-      {
-        id: 'feedback',
-        title: 'Feedback',
-        url: '/feedback',
-      },
-    ],
-  },
 ];
 
 export const navLinks = [
