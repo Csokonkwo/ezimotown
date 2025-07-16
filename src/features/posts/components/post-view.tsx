@@ -8,6 +8,7 @@ import { renderContent } from '@/components/render-content/render-content';
 import BlogStories from '@/components/blog-stories';
 import { motion } from 'motion/react';
 import { formatDate } from '@/utils/format';
+import ScrollZoomImage from '@/components/scroll/use-zoom-image';
 
 export default function PostView() {
   const scrollRef = useRef(null);
@@ -89,6 +90,25 @@ export default function PostView() {
         >
           {renderContent(post.content)}
         </motion.div>
+      {/* --- ALL IMAGES AFTER TEXT CONTENT --- */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ root: scrollRef }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+        className="mt-12 lg:mt-[93px]"
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 md:gap-0 w-full m-0 p-0">
+          {post?.images
+            ?.map((img) => (
+              <ScrollZoomImage
+                key={img.id}
+                src={`${process.env.NEXT_PUBLIC_URL}/${img.path}`}
+                alt={`${img.label} Images`}
+              />
+            ))}
+        </div>
+      </motion.div>
       </div>
       <BlogStories />
     </section>
